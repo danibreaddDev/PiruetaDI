@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.grid__bento {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  height: 800px;
+  font-family: "Inter", serif;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 0.5fr 1fr;
+  grid-template-areas: "image-1 image-2 image-3" "image-4 image-5 title" "image-4 image-5 restaurants";
+}
+
+.title__bento {
+  grid-area: title;
+  background: #ca4a3a;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+.title__bento h2 {
+  font-size: 32px;
+  font-weight: bolder;
+  color: white;
+}
+.title__bento:hover {
+  -webkit-text-decoration: dashed;
+          text-decoration: dashed;
+  text-decoration-line: underline;
+  text-underline-offset: 10px;
+}
+
+.image-1 {
+  background-image: url("/images/kioto-1.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+  grid-area: image-1;
+}
+
+.image-2 {
+  background-image: url("/images/kioto-1.jpeg");
+  background-size: cover;
+  background-position: center;
+  grid-area: image-2;
+}
+
+.image-3 {
+  background-image: url("/images/kioto-1.jpeg");
+  background-size: cover;
+  background-position: center;
+  grid-area: image-3;
+}
+
+.image-4 {
+  background-image: url("/images/kioto-1.jpeg");
+  background-size: cover;
+  background-position: center;
+  grid-area: image-4;
+}
+
+.image-5 {
+  background-image: url("/images/kioto-1.jpeg");
+  background-size: cover;
+  background-position: center;
+  grid-area: image-5;
+}
+
+.restaurants__bento {
+  padding: 10px;
+  grid-area: restaurants;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.restaurants__bento a {
+  color: black;
+  text-decoration: none;
+}
+.restaurants__bento .kioto__bento {
+  background: #FDE1A7;
+  padding: 10px;
+  display: flex;
+  width: 100%;
+  height: 33%;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: scale 0.1s ease-in-out, rotate 1s ease-in-out;
+}
+.restaurants__bento .kioto__bento .kioto__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.restaurants__bento .kioto__bento .kioto__link h2 {
+  font-size: 24px;
+  font-weight: light;
+}
+.restaurants__bento .kioto__bento:hover {
+  transform: rotate(-10deg);
+  scale: 125%;
+  border: 3px solid black;
+}
+.restaurants__bento .kioto__bento:hover h2 {
+  font-weight: bold;
+}/*# sourceMappingURL=principal.css.map */
