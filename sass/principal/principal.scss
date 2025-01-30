@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@mixin transitionBento{
+    transition: scale 0.1s ease-in-out, rotate 1s ease-in-out;
+    &:hover {
+        transform: rotate(-10deg);
+        scale: 125%;
+       
+        h2 {
+          font-weight: bold;
+        }
+      }
+}
 .grid__bento {
   display: grid;
   gap: 20px;
@@ -13,6 +24,7 @@
     "image-4 image-5 restaurants";
 }
 .title__bento {
+    @include transitionBento();
   grid-area: title;
   background: #ca4a3a;
   padding: 10px;
@@ -88,7 +100,7 @@
     height: 33%;
     justify-content: space-evenly;
     align-items: center;
-    transition: scale 0.1s ease-in-out, rotate 1s ease-in-out;
+   @include transitionBento();
     .kioto__link {
       display: flex;
       align-items: center;
@@ -98,13 +110,6 @@
         font-weight: light;
       }
     }
-    &:hover {
-      transform: rotate(-10deg);
-      scale: 125%;
-      border: 3px solid black;
-      h2 {
-        font-weight: bold;
-      }
-    }
+   
   }
 }

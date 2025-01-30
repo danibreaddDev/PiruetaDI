@@ -11,6 +11,7 @@
 }
 
 .title__bento {
+  transition: scale 0.1s ease-in-out, rotate 1s ease-in-out;
   grid-area: title;
   background: #ca4a3a;
   padding: 10px;
@@ -20,6 +21,13 @@
   cursor: pointer;
   text-decoration: none;
   color: white;
+}
+.title__bento:hover {
+  transform: rotate(-10deg);
+  scale: 125%;
+}
+.title__bento:hover h2 {
+  font-weight: bold;
 }
 .title__bento h2 {
   font-size: 32px;
@@ -92,6 +100,13 @@
   align-items: center;
   transition: scale 0.1s ease-in-out, rotate 1s ease-in-out;
 }
+.restaurants__bento .kioto__bento:hover {
+  transform: rotate(-10deg);
+  scale: 125%;
+}
+.restaurants__bento .kioto__bento:hover h2 {
+  font-weight: bold;
+}
 .restaurants__bento .kioto__bento .kioto__link {
   display: flex;
   align-items: center;
@@ -100,12 +115,4 @@
 .restaurants__bento .kioto__bento .kioto__link h2 {
   font-size: 24px;
   font-weight: light;
-}
-.restaurants__bento .kioto__bento:hover {
-  transform: rotate(-10deg);
-  scale: 125%;
-  border: 3px solid black;
-}
-.restaurants__bento .kioto__bento:hover h2 {
-  font-weight: bold;
 }/*# sourceMappingURL=principal.css.map */
