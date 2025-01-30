@@ -1,15 +1,72 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+body {
+  font-family: "Inter", serif;
+}
+
+header a {
+  color: black;
+  text-decoration: none;
+  font-weight: 200;
+}
+header a:hover {
+  font-weight: bold;
+  -webkit-text-decoration: dotted;
+          text-decoration: dotted;
+  text-decoration-line: underline;
+  text-underline-offset: 10px;
+  text-decoration-color: #ca4a3a;
+}
+header .btn__reserva {
+  background: #ca4a3a;
+}
+header .btn__reserva:hover {
+  border: 1px solid #ca4a3a;
+  color: #ca4a3a;
+}
+
 .grid__bento {
   display: grid;
   gap: 20px;
   width: 100%;
   height: 800px;
-  font-family: "Inter", serif;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 0.5fr 1fr;
   grid-template-areas: "image-1 image-2 image-3" "image-4 image-5 title" "image-4 image-5 restaurants";
 }
 
+@media (max-width: 1024px) {
+  .grid__bento {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "image-1 image-2" "image-3 title" "image-3 restaurants";
+  }
+  .grid__bento .image-4 {
+    display: none;
+  }
+  .grid__bento .image-5 {
+    display: none;
+  }
+}
+/* 📌 MÓVIL: Diseño en una columna */
+@media (max-width: 768px) {
+  .grid__bento {
+    grid-template-columns: 1fr;
+    grid-template-areas: "image-1" "title" "restaurants";
+  }
+  .grid__bento .image-2 {
+    display: none;
+  }
+  .grid__bento .image-3 {
+    display: none;
+  }
+  .grid__bento .image-4 {
+    display: none;
+  }
+  .grid__bento .image-5 {
+    display: none;
+  }
+}
 .title__bento {
   transition: scale 0.1s ease-in-out, rotate 1s ease-in-out;
   grid-area: title;
@@ -20,19 +77,31 @@
   justify-content: center;
   cursor: pointer;
   text-decoration: none;
-  color: white;
+  color: black;
 }
 .title__bento:hover {
   transform: rotate(-10deg);
-  scale: 125%;
+  scale: 150%;
 }
-.title__bento:hover h2 {
+@media (max-width: 576px) {
+  .title__bento:hover {
+    scale: 105%;
+  }
+}
+.title__bento:hover span {
   font-weight: bold;
+  -webkit-text-decoration: dotted;
+          text-decoration: dotted;
+  text-decoration-line: underline;
+  text-underline-offset: 10px;
+}
+.title__bento:hover svg {
+  transform: translateX(10px);
 }
 .title__bento h2 {
   font-size: 32px;
   font-weight: bolder;
-  color: white;
+  color: black;
 }
 .title__bento:hover {
   -webkit-text-decoration: dashed;
@@ -79,6 +148,10 @@
   grid-area: image-5;
 }
 
+.restaurant__title {
+  color: #ca4a3a;
+}
+
 .restaurants__bento {
   padding: 10px;
   grid-area: restaurants;
@@ -91,28 +164,160 @@
   text-decoration: none;
 }
 .restaurants__bento .kioto__bento {
-  background: #FDE1A7;
+  background: #eee5bf;
   padding: 10px;
-  display: flex;
   width: 100%;
   height: 33%;
-  justify-content: space-evenly;
-  align-items: center;
   transition: scale 0.1s ease-in-out, rotate 1s ease-in-out;
 }
 .restaurants__bento .kioto__bento:hover {
   transform: rotate(-10deg);
-  scale: 125%;
+  scale: 150%;
 }
-.restaurants__bento .kioto__bento:hover h2 {
+@media (max-width: 576px) {
+  .restaurants__bento .kioto__bento:hover {
+    scale: 105%;
+  }
+}
+.restaurants__bento .kioto__bento:hover span {
   font-weight: bold;
+  -webkit-text-decoration: dotted;
+          text-decoration: dotted;
+  text-decoration-line: underline;
+  text-underline-offset: 10px;
 }
-.restaurants__bento .kioto__bento .kioto__link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.restaurants__bento .kioto__bento:hover svg {
+  transform: translateX(10px);
 }
 .restaurants__bento .kioto__bento .kioto__link h2 {
   font-size: 24px;
   font-weight: light;
+}
+.restaurants__bento .dublin__bento {
+  background: #d1ffc6;
+  padding: 10px;
+  width: 100%;
+  height: 33%;
+  transition: scale 0.1s ease-in-out, rotate 1s ease-in-out;
+}
+.restaurants__bento .dublin__bento:hover {
+  transform: rotate(-10deg);
+  scale: 150%;
+}
+@media (max-width: 576px) {
+  .restaurants__bento .dublin__bento:hover {
+    scale: 105%;
+  }
+}
+.restaurants__bento .dublin__bento:hover span {
+  font-weight: bold;
+  -webkit-text-decoration: dotted;
+          text-decoration: dotted;
+  text-decoration-line: underline;
+  text-underline-offset: 10px;
+}
+.restaurants__bento .dublin__bento:hover svg {
+  transform: translateX(10px);
+}
+.restaurants__bento .dublin__bento .dublin__link h2 {
+  font-size: 24px;
+  font-weight: light;
+}
+.restaurants__bento .mongo__bento {
+  padding: 10px;
+  width: 100%;
+  height: 33%;
+  transition: scale 0.1s ease-in-out, rotate 1s ease-in-out;
+}
+.restaurants__bento .mongo__bento:hover {
+  transform: rotate(-10deg);
+  scale: 150%;
+}
+@media (max-width: 576px) {
+  .restaurants__bento .mongo__bento:hover {
+    scale: 105%;
+  }
+}
+.restaurants__bento .mongo__bento:hover span {
+  font-weight: bold;
+  -webkit-text-decoration: dotted;
+          text-decoration: dotted;
+  text-decoration-line: underline;
+  text-underline-offset: 10px;
+}
+.restaurants__bento .mongo__bento:hover svg {
+  transform: translateX(10px);
+}
+.restaurants__bento .mongo__bento .mongo__link h2 {
+  font-size: 24px;
+  font-weight: light;
+}
+
+.restaurants__section a {
+  color: white;
+}
+.restaurants__section .restaurant__kioto {
+  transition: transform 2s ease-in-out;
+}
+.restaurants__section .restaurant__kioto img {
+  filter: brightness(70%);
+  transition: scale 1s ease-in-out, filter 1s ease-in-out;
+}
+.restaurants__section .restaurant__kioto p {
+  display: none;
+}
+@media (min-width: 576px) {
+  .restaurants__section .restaurant__kioto:hover p {
+    padding: 10px;
+    display: flex;
+  }
+}
+.restaurants__section .restaurant__kioto:hover img {
+  scale: 110%;
+  filter: brightness(60%);
+}
+.restaurants__section .restaurant__dublin {
+  transition: transform 2s ease-in-out;
+}
+.restaurants__section .restaurant__dublin img {
+  filter: brightness(70%);
+  transition: scale 1s ease-in-out, filter 1s ease-in-out;
+}
+.restaurants__section .restaurant__dublin p {
+  display: none;
+}
+@media (min-width: 576px) {
+  .restaurants__section .restaurant__dublin:hover p {
+    padding: 10px;
+    display: flex;
+  }
+}
+.restaurants__section .restaurant__dublin:hover img {
+  scale: 110%;
+  filter: brightness(60%);
+}
+.restaurants__section .restaurant__mongo {
+  transition: transform 2s ease-in-out;
+}
+.restaurants__section .restaurant__mongo img {
+  filter: brightness(70%);
+  transition: scale 1s ease-in-out, filter 1s ease-in-out;
+}
+.restaurants__section .restaurant__mongo p {
+  display: none;
+}
+@media (min-width: 576px) {
+  .restaurants__section .restaurant__mongo:hover p {
+    padding: 10px;
+    display: flex;
+  }
+}
+.restaurants__section .restaurant__mongo:hover img {
+  scale: 110%;
+  filter: brightness(60%);
+}
+
+footer {
+  width: 100%;
+  background: #ca4a3a;
 }/*# sourceMappingURL=principal.css.map */
