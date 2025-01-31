@@ -70,12 +70,7 @@
     }
   }
 }
-@mixin addresses($addreses) {
-  @each $address in $addreses {
-    .address__#{$address} {
-    }
-  }
-}
+
 $main_color: #ca4a3a;
 $pale-dogwood: #d3c1c3ff;
 $almond: #e2d0beff;
@@ -267,8 +262,7 @@ footer {
   }
   width: 100%;
   background: $main_color;
-  $adresses: kioto, dublin, mongo;
-  @include addresses($adresses);
+
   .footer__title {
     h1 {
       font-family: "Chewy", serif;
