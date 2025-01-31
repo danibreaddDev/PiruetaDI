@@ -142,7 +142,6 @@ header {
   }
 }
 
-/* 📌 MÓVIL: Diseño en una columna */
 @media (max-width: 768px) {
   .grid__bento {
     grid-template-columns: 1fr;
@@ -274,14 +273,24 @@ footer {
     h1 {
       font-family: "Chewy", serif;
       font-size: 10vw;
-      letter-spacing: 50px;
+     letter-spacing: 10px;
+     
     }
+    @media (min-width: 576px) {
+      h1{
+        letter-spacing: 40px;
+      }
+     
+    }
+
   }
 }
-.offcanvas-header{
-  span{
+.offcanvas-header {
+  span {
     color: $main_color;
     font-family: "Chewy", serif;
-    letter-spacing: 10px;
+    letter-spacing: 20px;
+    
   }
+  
 }
