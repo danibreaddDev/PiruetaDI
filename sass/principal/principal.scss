@@ -77,16 +77,28 @@ $almond: #e2d0beff;
 $kioto_color: #eee5bfff;
 $tea-green: #e8f8c1ff;
 $dublin_color: #d1ffc6ff;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: "Inter", serif;
 }
 header {
-  h1 {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background: white;
+  width: 100%;
+  span {
     font-family: "Chewy", serif;
     font-weight: bold;
     color: $main_color;
     letter-spacing: 10px;
+   
   }
+
   a {
     color: black;
     text-decoration: none;
@@ -107,6 +119,7 @@ header {
     }
   }
 }
+
 .grid__bento {
   display: grid;
   gap: 20px;
