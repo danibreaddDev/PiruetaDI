@@ -1,9 +1,15 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 body {
   font-family: "Inter", serif;
 }
 
+header h1 {
+  font-family: "Chewy", serif;
+  font-weight: bold;
+  color: #ca4a3a;
+  letter-spacing: 10px;
+}
 header a {
   color: black;
   text-decoration: none;
@@ -77,7 +83,7 @@ header .btn__reserva:hover {
   justify-content: center;
   cursor: pointer;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 .title__bento:hover {
   transform: rotate(-10deg);
@@ -99,9 +105,10 @@ header .btn__reserva:hover {
   transform: translateX(10px);
 }
 .title__bento h2 {
-  font-size: 32px;
+  font-family: "Chewy", serif;
+  font-size: 40px;
   font-weight: bolder;
-  color: black;
+  color: white;
 }
 .title__bento:hover {
   -webkit-text-decoration: dashed;
@@ -149,6 +156,7 @@ header .btn__reserva:hover {
 }
 
 .restaurant__title {
+  font-family: "Chewy", serif;
   color: #ca4a3a;
 }
 
@@ -170,6 +178,10 @@ header .btn__reserva:hover {
   height: 33%;
   transition: scale 0.1s ease-in-out, rotate 1s ease-in-out;
 }
+.restaurants__bento .kioto__bento span {
+  font-family: "Chewy", serif;
+  font-weight: lighter;
+}
 .restaurants__bento .kioto__bento:hover {
   transform: rotate(-10deg);
   scale: 150%;
@@ -189,16 +201,16 @@ header .btn__reserva:hover {
 .restaurants__bento .kioto__bento:hover svg {
   transform: translateX(10px);
 }
-.restaurants__bento .kioto__bento .kioto__link h2 {
-  font-size: 24px;
-  font-weight: light;
-}
 .restaurants__bento .dublin__bento {
   background: #d1ffc6;
   padding: 10px;
   width: 100%;
   height: 33%;
   transition: scale 0.1s ease-in-out, rotate 1s ease-in-out;
+}
+.restaurants__bento .dublin__bento span {
+  font-family: "Chewy", serif;
+  font-weight: lighter;
 }
 .restaurants__bento .dublin__bento:hover {
   transform: rotate(-10deg);
@@ -219,15 +231,15 @@ header .btn__reserva:hover {
 .restaurants__bento .dublin__bento:hover svg {
   transform: translateX(10px);
 }
-.restaurants__bento .dublin__bento .dublin__link h2 {
-  font-size: 24px;
-  font-weight: light;
-}
 .restaurants__bento .mongo__bento {
   padding: 10px;
   width: 100%;
   height: 33%;
   transition: scale 0.1s ease-in-out, rotate 1s ease-in-out;
+}
+.restaurants__bento .mongo__bento span {
+  font-family: "Chewy", serif;
+  font-weight: lighter;
 }
 .restaurants__bento .mongo__bento:hover {
   transform: rotate(-10deg);
@@ -248,16 +260,15 @@ header .btn__reserva:hover {
 .restaurants__bento .mongo__bento:hover svg {
   transform: translateX(10px);
 }
-.restaurants__bento .mongo__bento .mongo__link h2 {
-  font-size: 24px;
-  font-weight: light;
-}
 
 .restaurants__section a {
   color: white;
 }
 .restaurants__section .restaurant__kioto {
   transition: transform 2s ease-in-out;
+}
+.restaurants__section .restaurant__kioto h2 {
+  font-family: "Chewy", serif;
 }
 .restaurants__section .restaurant__kioto img {
   filter: brightness(70%);
@@ -279,6 +290,9 @@ header .btn__reserva:hover {
 .restaurants__section .restaurant__dublin {
   transition: transform 2s ease-in-out;
 }
+.restaurants__section .restaurant__dublin h2 {
+  font-family: "Chewy", serif;
+}
 .restaurants__section .restaurant__dublin img {
   filter: brightness(70%);
   transition: scale 1s ease-in-out, filter 1s ease-in-out;
@@ -298,6 +312,9 @@ header .btn__reserva:hover {
 }
 .restaurants__section .restaurant__mongo {
   transition: transform 2s ease-in-out;
+}
+.restaurants__section .restaurant__mongo h2 {
+  font-family: "Chewy", serif;
 }
 .restaurants__section .restaurant__mongo img {
   filter: brightness(70%);
@@ -320,4 +337,32 @@ header .btn__reserva:hover {
 footer {
   width: 100%;
   background: #ca4a3a;
+}
+footer .asked__questions {
+  font-family: "Chewy", serif;
+}
+footer .asked__questions .accordion {
+  background: #ca4a3a !important;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  font-family: "Chewy", serif;
+}
+footer a:hover {
+  -webkit-text-decoration: dashed;
+          text-decoration: dashed;
+  text-decoration-line: underline;
+  text-underline-offset: 10px;
+}
+footer .footer__title h1 {
+  font-family: "Chewy", serif;
+  font-size: 10vw;
+  letter-spacing: 50px;
+}
+
+.offcanvas-header span {
+  color: #ca4a3a;
+  font-family: "Chewy", serif;
+  letter-spacing: 10px;
 }/*# sourceMappingURL=principal.css.map */

@@ -1,7 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @mixin setCities($cities) {
   @each $city in $cities {
     .#{$city}__bento {
+      span {
+        font-family: "Chewy", serif;
+        font-weight: lighter;
+      }
       @if $city == kioto {
         background: $kioto_color;
       } @else if $city == dublin {
@@ -12,12 +16,6 @@
       width: 100%;
       height: 33%;
       @include transitionBento();
-      .#{$city}__link {
-        h2 {
-          font-size: 24px;
-          font-weight: light;
-        }
-      }
     }
   }
 }
@@ -45,6 +43,9 @@
   @each $restaurant in $restaurants {
     .restaurant__#{$restaurant} {
       transition: transform 2s ease-in-out;
+      h2 {
+        font-family: "Chewy", serif;
+      }
 
       img {
         filter: brightness(70%);
@@ -69,6 +70,12 @@
     }
   }
 }
+@mixin addresses($addreses) {
+  @each $address in $addreses {
+    .address__#{$address} {
+    }
+  }
+}
 $main_color: #ca4a3a;
 $pale-dogwood: #d3c1c3ff;
 $almond: #e2d0beff;
@@ -79,6 +86,12 @@ body {
   font-family: "Inter", serif;
 }
 header {
+  h1 {
+    font-family: "Chewy", serif;
+    font-weight: bold;
+    color: $main_color;
+    letter-spacing: 10px;
+  }
   a {
     color: black;
     text-decoration: none;
@@ -161,11 +174,12 @@ header {
   justify-content: center;
   cursor: pointer;
   text-decoration: none;
-  color: black;
+  color: white;
   h2 {
-    font-size: 32px;
+    font-family: "Chewy", serif;
+    font-size: 40px;
     font-weight: bolder;
-    color: black;
+    color: white;
   }
   &:hover {
     text-decoration: dashed;
@@ -210,6 +224,7 @@ header {
   grid-area: image-5;
 }
 .restaurant__title {
+  font-family: "Chewy", serif;
   color: $main_color;
 }
 .restaurants__bento {
@@ -235,6 +250,38 @@ header {
   @include restaurants($restaurants);
 }
 footer {
+  .asked__questions {
+    font-family: "Chewy", serif;
+    .accordion {
+      background: #ca4a3a !important;
+    }
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    font-family: "Chewy", serif;
+    &:hover {
+      text-decoration: dashed;
+      text-decoration-line: underline;
+      text-underline-offset: 10px;
+    }
+  }
   width: 100%;
   background: $main_color;
+  $adresses: kioto, dublin, mongo;
+  @include addresses($adresses);
+  .footer__title {
+    h1 {
+      font-family: "Chewy", serif;
+      font-size: 10vw;
+      letter-spacing: 50px;
+    }
+  }
+}
+.offcanvas-header{
+  span{
+    color: $main_color;
+    font-family: "Chewy", serif;
+    letter-spacing: 10px;
+  }
 }
