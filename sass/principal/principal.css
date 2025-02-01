@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Chewy&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@keyframes iconMove {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+    scale: 125%;
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -46,6 +58,10 @@ header .btn__reserva {
 header .btn__reserva:hover {
   border: 1px solid #ca4a3a;
   color: #ca4a3a;
+}
+
+i {
+  animation: iconMove 2s ease-in-out infinite;
 }
 
 .grid__bento {

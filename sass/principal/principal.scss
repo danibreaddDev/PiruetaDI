@@ -77,6 +77,18 @@ $almond: #e2d0beff;
 $kioto_color: #eee5bfff;
 $tea-green: #e8f8c1ff;
 $dublin_color: #d1ffc6ff;
+@keyframes iconMove {
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(10deg);
+    scale: 125%;
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -123,7 +135,9 @@ header {
     }
   }
 }
-
+i{
+  animation: iconMove 2s ease-in-out infinite;
+}
 .grid__bento {
   display: grid;
   gap: 20px;
