@@ -77,7 +77,7 @@ $almond: #e2d0beff;
 $kioto_color: #eee5bfff;
 $tea-green: #e8f8c1ff;
 $dublin_color: #d1ffc6ff;
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -95,8 +95,12 @@ header {
     font-family: "Chewy", serif;
     font-weight: bold;
     color: $main_color;
-    letter-spacing: 10px;
-   
+    letter-spacing: normal;
+  }
+  @media (min-width: 576px) {
+    span {
+      letter-spacing: 10px;
+    }
   }
 
   a {
@@ -280,24 +284,19 @@ footer {
     h1 {
       font-family: "Chewy", serif;
       font-size: 10vw;
-     letter-spacing: 10px;
-     
+      letter-spacing: 10px;
     }
     @media (min-width: 576px) {
-      h1{
+      h1 {
         letter-spacing: 40px;
       }
-     
     }
-
   }
 }
 .offcanvas-header {
   span {
     color: $main_color;
     font-family: "Chewy", serif;
-    letter-spacing: 20px;
-    
+    letter-spacing: 10px;
   }
-  
 }

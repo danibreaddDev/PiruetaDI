@@ -21,25 +21,24 @@
 
   <body>
     <header>
-      <nav class="px-md-5 container-fluid navbar">
-        <div class="pt-5 pb-3 row w-100">
-          <div
-            class="d-flex flex-row align-items-center justify-content-between"
+      <nav class="pt-5 pb-3 container-fluid">
+        <div
+          class="px-2 px-md-5 navbar d-flex flex-row align-items-center justify-content-between"
+        >
+          <span class="fs-1 fw-bold">PIRUETA</span>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvas"
+            aria-controls="offcanvasExample"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-            <h1 class="fw-bold">PIRUETA</h1>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvas"
-              aria-controls="offcanvasExample"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
+
         <!--Canvas-->
         <div
           class="offcanvas offcanvas-start"
@@ -48,7 +47,7 @@
           aria-labelledby="offcanvasExampleLabel"
         >
           <div class="offcanvas-header">
-           <span class="fs-2 align-self-center">PIRUETA</span>
+            <span class="fs-2 align-self-center">PIRUETA</span>
             <button
               type="button"
               class="btn-close"
@@ -294,40 +293,41 @@
       </section>
     </main>
     <footer>
-      <section
-        class="mt-5 px-5 container-fluid text-white text-md-start text-center"
-      >
-        <div class="pt-5 row row-cols-1 row-cols-lg-3">
-          <div class="col">
-            <div class="asked__questions">
-              <h2>Preguntes Frequents</h2>
-    
-            </div>
-          </div>
-          <div class="col col-lg-8">
-            <div
-              class="d-flex flex-column flex-md-row justify-content-between gap-2"
-            >
-              <div class="address__kioto d-flex flex-column">
-                <h6 class="fw-bold">Carrer mongo,N.72 46145 Valencia.</h6>
-                <p class="fw-light">InfoKioto@piruleta.com</p>
-                <small>+34 772128776</small>
-              </div>
-
-              <div class="address__dublin">
-                <h6 class="fw-bold">Carrer mongo,N.72 46145 Valencia.</h6>
-                <p class="fw-light">InfoKioto@piruleta.com</p>
-                <small>+34 772128776</small>
-              </div>
-
-              <div class="address__mongo">
-                <h6 class="fw-bold">Carrer mongo,N.72 46145 Valencia.</h6>
-                <p class="fw-light">InfoKioto@piruleta.com</p>
-                <small>+34 772128776</small>
+      <div class="container-fluid text-white">
+        <section
+          class="mt-5 px-5 text-white text-md-start text-center"
+        >
+          <div class="pt-5 row row-cols-1 row-cols-lg-3">
+            <div class="col">
+              <div class="asked__questions">
+                <h2>Preguntes Frequents</h2>
               </div>
             </div>
+            <div class="col col-lg-8">
+              <div
+                class="d-flex flex-column flex-md-row justify-content-between gap-2"
+              >
+                <div class="address__kioto d-flex flex-column">
+                  <h6 class="fw-bold">Carrer mongo,N.72 46145 Valencia.</h6>
+                  <p class="fw-light">InfoKioto@piruleta.com</p>
+                  <small>+34 772128776</small>
+                </div>
+
+                <div class="address__dublin">
+                  <h6 class="fw-bold">Carrer mongo,N.72 46145 Valencia.</h6>
+                  <p class="fw-light">InfoKioto@piruleta.com</p>
+                  <small>+34 772128776</small>
+                </div>
+
+                <div class="address__mongo">
+                  <h6 class="fw-bold">Carrer mongo,N.72 46145 Valencia.</h6>
+                  <p class="fw-light">InfoKioto@piruleta.com</p>
+                  <small>+34 772128776</small>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
         <section class="mt-5 pt-5 row row-cols-1 row-cols-sm-3 g-2">
           <div class="col d-flex justify-content-center align-items-center">
             <a href="">Termes de privacitat</a>
@@ -335,7 +335,9 @@
           <div class="col d-flex justify-content-center align-items-center">
             <a href="">Sobre Nosaltres</a>
           </div>
-          <div class="col d-inline-flex gap-2 justify-content-center align-items-center">
+          <div
+            class="col d-inline-flex gap-2 justify-content-center align-items-center"
+          >
             <svg
               role="img"
               fill="white"
@@ -361,10 +363,10 @@
               />
             </svg>
           </div>
+        </section>
+        <div class="footer__title mt-5 row text-center">
+          <h1 class="fw-bolder">PIRUETA</h1>
         </div>
-      </section>
-      <div class="footer__title mt-5 row text-center">
-        <h1 class="fw-bolder">PIRUETA</h1>
       </div>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
