@@ -48,14 +48,23 @@ header a:hover {
 }
 header .btn__reserva {
   background: #ca4a3a;
+  color: white;
 }
 header .btn__reserva:hover {
   border: 1px solid #ca4a3a;
   color: #ca4a3a;
 }
 
-i {
+.reserva svg {
+  padding: 10px;
   animation: iconMove 2s ease-in-out infinite;
+  color: #ca4a3a;
+  transition: color 0.5s ease-in-out;
+}
+.reserva svg:hover {
+  border-radius: 10px;
+  background: #ca4a3a;
+  color: white;
 }
 
 .grid__bento {
@@ -257,33 +266,34 @@ i {
 .restaurants__bento .dublin__bento:hover svg {
   transform: translateX(10px);
 }
-.restaurants__bento .mongo__bento {
+.restaurants__bento .munich__bento {
+  background: #d3c1c3;
   padding: 10px;
   width: 100%;
   height: 33%;
   transition: scale 0.1s ease-in-out, rotate 1s ease-in-out;
 }
-.restaurants__bento .mongo__bento span {
+.restaurants__bento .munich__bento span {
   font-family: "Chewy", serif;
   font-weight: lighter;
 }
-.restaurants__bento .mongo__bento:hover {
+.restaurants__bento .munich__bento:hover {
   transform: rotate(-10deg);
   scale: 150%;
 }
 @media (max-width: 576px) {
-  .restaurants__bento .mongo__bento:hover {
+  .restaurants__bento .munich__bento:hover {
     scale: 105%;
   }
 }
-.restaurants__bento .mongo__bento:hover span {
+.restaurants__bento .munich__bento:hover span {
   font-weight: bold;
   -webkit-text-decoration: dotted;
           text-decoration: dotted;
   text-decoration-line: underline;
   text-underline-offset: 10px;
 }
-.restaurants__bento .mongo__bento:hover svg {
+.restaurants__bento .munich__bento:hover svg {
   transform: translateX(10px);
 }
 
@@ -336,26 +346,26 @@ i {
   scale: 110%;
   filter: brightness(60%);
 }
-.restaurants__section .restaurant__mongo {
+.restaurants__section .restaurant__munich {
   transition: transform 2s ease-in-out;
 }
-.restaurants__section .restaurant__mongo h2 {
+.restaurants__section .restaurant__munich h2 {
   font-family: "Chewy", serif;
 }
-.restaurants__section .restaurant__mongo img {
+.restaurants__section .restaurant__munich img {
   filter: brightness(70%);
   transition: scale 1s ease-in-out, filter 1s ease-in-out;
 }
-.restaurants__section .restaurant__mongo p {
+.restaurants__section .restaurant__munich p {
   display: none;
 }
 @media (min-width: 576px) {
-  .restaurants__section .restaurant__mongo:hover p {
+  .restaurants__section .restaurant__munich:hover p {
     padding: 10px;
     display: flex;
   }
 }
-.restaurants__section .restaurant__mongo:hover img {
+.restaurants__section .restaurant__munich:hover img {
   scale: 110%;
   filter: brightness(60%);
 }

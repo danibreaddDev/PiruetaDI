@@ -17,8 +17,14 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/sass/principal/principal.css" />
-<!-- Font Awesome 5 Free CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome 5 Free CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
   <body>
@@ -37,8 +43,19 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-           
-          <i class="fa-solid fa-utensils fa-2xl" style="color: #ca4a3a;"></i>            
+            <div class="reserva">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="56"
+                height="56"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M6 22v-9.15q-1.35-.35-2.175-1.425T3 9V2h2v6h1V2h2v6h1V2h2v7q0 1.35-.825 2.425T8 12.85V22zm10 0v-9.525q-1.35-.45-2.175-1.887T13 7.325Q13 5.1 14.175 3.55T17 2t2.825 1.562T21 7.35q0 1.825-.825 3.25T18 12.475V22z"
+                />
+              </svg>
+            </div>
           </button>
         </div>
 
@@ -104,29 +121,14 @@
                 </div>
               </div>
 
-              <div class="flag">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 512 512"
-                >
-                  <mask id="circleFlagsJa0">
-                    <circle cx="256" cy="256" r="256" fill="#fff" />
-                  </mask>
-                  <g mask="url(#circleFlagsJa0)">
-                    <path fill="#eee" d="M0 0h512v512H0z" />
-                    <circle cx="256" cy="256" r="111.3" fill="#d80027" />
-                  </g>
-                </svg>
-              </div>
+              <img src="/images/kioto.png" width="40" height="32" alt="munich">
             </a>
             <a
               href=""
-              class="kioto__bento d-flex justify-content-evenly align-items-center rounded-4"
+              class="munich__bento d-flex justify-content-evenly align-items-center rounded-4"
             >
-              <div class="kioto__link d-flex align-items-center gap-2">
-                <span class="fs-3">Kioto</span>
+              <div class="munich__link d-flex align-items-center gap-2">
+                <span class="fs-3">Munich</span>
                 <div class="icon__link align-self-start">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -142,22 +144,9 @@
                 </div>
               </div>
 
-              <div class="flag">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 512 512"
-                >
-                  <mask id="circleFlagsJa0">
-                    <circle cx="256" cy="256" r="256" fill="#fff" />
-                  </mask>
-                  <g mask="url(#circleFlagsJa0)">
-                    <path fill="#eee" d="M0 0h512v512H0z" />
-                    <circle cx="256" cy="256" r="111.3" fill="#d80027" />
-                  </g>
-                </svg>
-              </div>
+              
+                <img src="/images/munich.svg" width="32" height="32" alt="munich">
+              
             </a>
             <a
               href=""
@@ -180,26 +169,7 @@
                 </div>
               </div>
 
-              <div class="flag">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 512 512"
-                >
-                  <mask id="circleFlagsIe0">
-                    <circle cx="256" cy="256" r="256" fill="#fff" />
-                  </mask>
-                  <g mask="url(#circleFlagsIe0)">
-                    <path
-                      fill="#eee"
-                      d="M167 0h178l25.9 252.3L345 512H167l-29.8-253.4z"
-                    />
-                    <path fill="#6da544" d="M0 0h167v512H0z" />
-                    <path fill="#ff9811" d="M345 0h167v512H345z" />
-                  </g>
-                </svg>
-              </div>
+              <img src="/images/dublin.png" width="40" height="32" alt="munich">
             </a>
           </div>
         </div>
@@ -271,7 +241,7 @@
           <div class="col">
             <a
               href=""
-              class="restaurant__mongo position-relative d-flex flex-column gap-3 align-items-center"
+              class="restaurant__munich position-relative d-flex flex-column gap-3 align-items-center"
             >
               <img
                 src="images/dublin.jpg"
@@ -282,7 +252,7 @@
               <div
                 class="position-absolute d-flex flex-column justify-content-center align-items-center text-center h-100"
               >
-                <h2 class="fw-bolder">Mongo</h2>
+                <h2 class="fw-bolder">Munich</h2>
                 <p class="fw-normal">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Quibusdam aspernatur consequatur cumque natus repellat facilis
@@ -297,9 +267,7 @@
     </main>
     <footer>
       <div class="container-fluid text-white">
-        <section
-          class="mt-5 px-5 text-white text-md-start text-center"
-        >
+        <section class="mt-5 px-5 text-white text-md-start text-center">
           <div class="pt-5 row row-cols-1 row-cols-lg-3">
             <div class="col">
               <div class="asked__questions">
@@ -322,7 +290,7 @@
                   <small>+34 772128776</small>
                 </div>
 
-                <div class="address__mongo">
+                <div class="address__munich">
                   <h6 class="fw-bold">Carrer mongo,N.72 46145 Valencia.</h6>
                   <p class="fw-light">InfoKioto@piruleta.com</p>
                   <small>+34 772128776</small>

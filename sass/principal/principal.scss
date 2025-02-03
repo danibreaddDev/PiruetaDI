@@ -11,6 +11,7 @@
       } @else if $city == dublin {
         background: $dublin_color;
       } @else {
+        background: $munich_color;
       }
       padding: 10px;
       width: 100%;
@@ -72,20 +73,20 @@
 }
 
 $main_color: #ca4a3a;
-$pale-dogwood: #d3c1c3ff;
+$munich_color: #d3c1c3ff;
 $almond: #e2d0beff;
 $kioto_color: #eee5bfff;
 $tea-green: #e8f8c1ff;
 $dublin_color: #d1ffc6ff;
 @keyframes iconMove {
-  0%{
+  0% {
     transform: rotate(0deg);
   }
-  50%{
+  50% {
     transform: rotate(10deg);
     scale: 125%;
   }
-  100%{
+  100% {
     transform: rotate(0deg);
   }
 }
@@ -125,14 +126,25 @@ header {
   }
   .btn__reserva {
     background: $main_color;
+    color: white;
     &:hover {
       border: 1px solid $main_color;
       color: $main_color;
     }
   }
 }
-i{
-  animation: iconMove 2s ease-in-out infinite;
+.reserva {
+  svg {
+    padding: 10px;
+    animation: iconMove 2s ease-in-out infinite;
+    color: $main_color;
+    transition: color 0.5s ease-in-out;
+    &:hover {
+      border-radius: 10px;
+      background: $main_color;
+      color: white;
+    }
+  }
 }
 .grid__bento {
   display: grid;
@@ -259,7 +271,7 @@ i{
     color: black;
     text-decoration: none;
   }
-  $cities: kioto, dublin, mongo;
+  $cities: kioto, dublin, munich;
   @include setCities($cities);
 }
 .restaurants__section {
@@ -267,7 +279,7 @@ i{
     color: white;
   }
 
-  $restaurants: kioto, dublin, mongo;
+  $restaurants: kioto, dublin, munich;
   @include restaurants($restaurants);
 }
 footer {
