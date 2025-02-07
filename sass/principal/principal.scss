@@ -76,11 +76,32 @@
     }
   }
 }
+@mixin animationImages($index) {
+  @keyframes animationImage-#{$index} {
+    0% {
+      background-image: url("/images/bento/image-#{$index}.webp");
+    }
+    25% {
+      background-image: url("/images/bento/image-#{$index}-1.webp");
+    }
+    50% {
+      background-image: url("/images/bento/image-#{$index}-2.webp");
+    }
+    75% {
+      background-image: url("/images/bento/image-#{$index}-3.webp");
+    }
+    100% {
+      background-image: url("/images/bento/image-#{$index}-4.webp");
+    }
+  }
+}
+
 @mixin imagesBento($images) {
   $index: 1;
   @each $image in $images {
     .image-#{$index} {
-      background-image: url("/images/bento/image-#{$index}.webp");
+      @include animationImages($index);
+      animation: animationImage-#{$index} 10s linear infinite;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -229,7 +250,7 @@ header {
   color: white;
   h2 {
     font-family: "Chewy", serif;
-    font-size: 40px;
+    font-size: clamp(14px, 10vw, 42px);
     font-weight: bolder;
     color: white;
   }
@@ -262,7 +283,10 @@ header {
   a {
     color: white;
   }
-
+  img {
+    object-fit: cover;
+    height: 300px;
+  }
   $restaurants: kioto, dublin, munich;
   @include restaurants($restaurants);
 }
