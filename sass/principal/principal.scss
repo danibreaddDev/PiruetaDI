@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Chewy&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@function random($images) {
+  $length: length($images);
+  $randomIndex: random($length);
+  @return $randomIndex;
+}
 @mixin setCities($cities) {
   @each $city in $cities {
     .#{$city}__bento {
@@ -71,7 +76,19 @@
     }
   }
 }
-
+@mixin imagesBento($images) {
+  $index: 1;
+  @each $image in $images {
+    .image-#{$index} {
+      background-image: url("/images/bento/image-#{$index}.webp");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      grid-area: image-#{$index};
+    }
+    $index: $index + 1;
+  }
+}
 $main_color: #ca4a3a;
 $munich_color: #d3c1c3ff;
 $almond: #e2d0beff;
@@ -158,6 +175,8 @@ header {
     "image-1 image-2 image-3"
     "image-4 image-5 title"
     "image-4 image-5 restaurants";
+  $images: image-1, image-2, image-3, image-4, image-5;
+  @include imagesBento($images);
 }
 @media (max-width: 1024px) {
   .grid__bento {
@@ -220,42 +239,7 @@ header {
     text-underline-offset: 10px;
   }
 }
-.image-1 {
-  background-image: url("/images/kioto-1.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: 300px;
-  grid-area: image-1;
-}
-.image-2 {
-  background-image: url("/images/kioto-1.jpeg");
-  background-size: cover;
-  background-position: center;
 
-  grid-area: image-2;
-}
-.image-3 {
-  background-image: url("/images/kioto-1.jpeg");
-  background-size: cover;
-  background-position: center;
-
-  grid-area: image-3;
-}
-.image-4 {
-  background-image: url("/images/kioto-1.jpeg");
-  background-size: cover;
-  background-position: center;
-
-  grid-area: image-4;
-}
-.image-5 {
-  background-image: url("/images/kioto-1.jpeg");
-  background-size: cover;
-  background-position: center;
-  grid-area: image-5;
-}
 .restaurant__title {
   font-family: "Chewy", serif;
   color: $main_color;
