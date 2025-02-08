@@ -110,6 +110,12 @@
     $index: $index + 1;
   }
 }
+%title {
+  font-family: "Chewy", serif;
+  font-weight: bold;
+  color: $main_color;
+  letter-spacing: normal;
+}
 $main_color: #ca4a3a;
 $munich_color: #d3c1c3ff;
 $almond: #e2d0beff;
@@ -139,10 +145,7 @@ header {
   background: white;
   width: 100%;
   span {
-    font-family: "Chewy", serif;
-    font-weight: bold;
-    color: $main_color;
-    letter-spacing: normal;
+    @extend %title;
   }
   @media (min-width: 576px) {
     span {

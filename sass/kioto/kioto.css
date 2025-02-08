@@ -1,1 +1,69 @@
-/*# sourceMappingURL=kioto.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+main .hero__section .title, header span {
+  font-family: "Chewy", serif;
+  color: #ca4a3a;
+  letter-spacing: normal;
+}
+
+header .btn__reserva {
+  background: #ca4a3a;
+  color: white;
+}
+header .btn__reserva:hover {
+  border: 1px solid #ca4a3a;
+  color: #ca4a3a;
+}
+
+.reserva svg {
+  padding: 10px;
+  animation: iconMove 2s ease-in-out infinite;
+  color: #ca4a3a;
+  transition: color 0.5s ease-in-out;
+}
+.reserva svg:hover {
+  border-radius: 10px;
+  background: #ca4a3a;
+  color: white;
+}
+
+main .hero__section .title {
+  font-size: clamp(16px, 10vw, 96px);
+  font-weight: bold;
+}
+main .hero__section .description {
+  color: #ca4a3a;
+}
+main .hero__section .hero__images {
+  gap: 100px;
+}
+main .hero__section .hero__images .image-1 {
+  transform: rotate(-10deg);
+  background-image: url("/images/kioto/hero-1.jpeg");
+  background-size: cover;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+}
+main .hero__section .hero__images .image-2 {
+  transform: rotate(10deg) translateY(-70px);
+  background-image: url("/images/kioto/hero-2.jpeg");
+  background-size: cover;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+}
+main .hero__section .hero__images .image-3 {
+  transform: rotate(10deg);
+  background-image: url("/images/kioto/hero-3.jpeg");
+  background-size: cover;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+}
+main .about__section {
+  width: 100%;
+  background: #ca4a3a;
+}/*# sourceMappingURL=kioto.css.map */

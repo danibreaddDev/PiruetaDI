@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@mixin imagesHero {
+    @for $i from 1 through 3 {
+      .image-#{$i} {
+        @if $i == 1 {
+          transform: rotate(-10deg);
+        } @else if $i == 2 {
+          transform: rotate(10deg) translateY(-70px);
+        } @else {
+          transform: rotate(10deg);
+        }
+        background-image: url("/images/kioto/hero-#{$i}.jpeg");
+        background-size: cover;
+        width: 300px;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 400px;
+      }
+    }
+  }
+$main_color: #ca4a3a;
+%title {
+  font-family: "Chewy", serif;
+
+  color: $main_color;
+  letter-spacing: normal;
+}
+header {
+  span {
+    @extend %title;
+  }
+  .btn__reserva {
+    background: $main_color;
+    color: white;
+    &:hover {
+      border: 1px solid $main_color;
+      color: $main_color;
+    }
+  }
+}
+.reserva {
+  svg {
+    padding: 10px;
+    animation: iconMove 2s ease-in-out infinite;
+    color: $main_color;
+    transition: color 0.5s ease-in-out;
+    &:hover {
+      border-radius: 10px;
+      background: $main_color;
+      color: white;
+    }
+  }
+}
+main {
+  .hero__section {
+    .title {
+      @extend %title;
+      font-size: clamp(16px, 10vw, 96px);
+      font-weight: bold;
+    }
+    .description {
+      color: $main_color;
+    }
+    .hero__images{
+        gap: 100px;
+        @include imagesHero();
+    }
+  
+  }
+  .about__section{
+    width: 100%;
+    background: $main_color;
+  }
+}
