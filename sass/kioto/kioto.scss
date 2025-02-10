@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@font-face {
+  font-family: fontJapan;
+  src: url("/fonts/Japan\ wave.ttf");
+}
 @mixin imagesHero {
   @for $i from 1 through 3 {
     .image-#{$i} {
@@ -15,6 +18,10 @@
       background-repeat: no-repeat;
       background-position: center;
       height: 400px;
+      @media (max-width: 556px) {
+        width: 125px;
+        height: 225px;
+      }
     }
   }
 }
@@ -38,9 +45,11 @@
   height: 25px;
 }
 $main_color: #ca4a3a;
+%font {
+  font-family: fontJapan;
+}
 %title {
-  font-family: "Chewy", serif;
-
+  @extend %font;
   color: $main_color;
   letter-spacing: normal;
 }
@@ -87,6 +96,12 @@ main {
     }
   }
   .about__section {
+    .about__title {
+      font-family: fontJapan;
+    }
+    .feature {
+      @extend %font;
+    }
     width: 100%;
     background: $main_color;
     .mark__section {
@@ -96,24 +111,29 @@ main {
 
     @include imagesabout();
   }
+  .title__section {
+    @extend %font;
+    color: $main_color;
+  }
   .menu__section {
     .mark__section {
       @extend %mark;
       background: $main_color;
     }
-    .title__section {
-      color: $main_color;
-    }
+
     .menu__container {
       .col {
         margin: 0;
         padding: 0;
       }
+      .menu__info {
+        @extend %title;
+      }
       span {
         display: none;
       }
       img {
-        transition: scale 1s ease-in-out;
+        transition: scale 1s ease-in-out, filter 1s ease-in-out;
         object-fit: cover;
         height: 300px;
         width: 100%;
@@ -125,9 +145,52 @@ main {
             display: flex;
           }
           img {
+            filter: brightness(70%);
             scale: 110%;
           }
         }
+      }
+      .slogan {
+        @extend %font;
+      }
+    }
+  }
+}
+.specialday__section {
+  .mark__section {
+    @extend %mark;
+    background: $main_color;
+  }
+}
+footer {
+  .asked__questions {
+    @extend %font;
+    .accordion {
+      background: #ca4a3a !important;
+    }
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    font-family: "Chewy", serif;
+    &:hover {
+      text-decoration: dashed;
+      text-decoration-line: underline;
+      text-underline-offset: 10px;
+    }
+  }
+  width: 100%;
+  background: $main_color;
+
+  .footer__title {
+    h1 {
+      @extend %font;
+      font-size: 10vw;
+      letter-spacing: 10px;
+    }
+    @media (min-width: 576px) {
+      h1 {
+        letter-spacing: 40px;
       }
     }
   }
