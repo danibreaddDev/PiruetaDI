@@ -1,23 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Chewy&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @mixin imagesHero {
-    @for $i from 1 through 3 {
-      .image-#{$i} {
-        @if $i == 1 {
-          transform: rotate(-10deg);
-        } @else if $i == 2 {
-          transform: rotate(10deg) translateY(-70px);
-        } @else {
-          transform: rotate(10deg);
-        }
-        background-image: url("/images/kioto/hero-#{$i}.jpeg");
-        background-size: cover;
-        width: 300px;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 400px;
+  @for $i from 1 through 3 {
+    .image-#{$i} {
+      @if $i == 1 {
+        transform: rotate(-10deg);
+      } @else if $i == 2 {
+        transform: rotate(10deg) translateY(-70px);
+      } @else {
+        transform: rotate(10deg);
       }
+      background-image: url("/images/kioto/hero-#{$i}.jpeg");
+      background-size: cover;
+      width: 300px;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 400px;
     }
   }
+}
+@mixin imagesabout() {
+  @for $i from 1 through 2 {
+    $extension: "";
+    .image-about-#{$i} {
+      @if $i == 1 {
+        $extension: ".webp";
+      } @else {
+        $extension: ".jpg";
+      }
+      background: url("/images/kioto/about-#{$i}#{$extension}");
+      background-size: cover;
+      height: 500px;
+    }
+  }
+}
+%mark {
+  width: 25px;
+  height: 25px;
+}
 $main_color: #ca4a3a;
 %title {
   font-family: "Chewy", serif;
@@ -25,6 +44,7 @@ $main_color: #ca4a3a;
   color: $main_color;
   letter-spacing: normal;
 }
+
 header {
   span {
     @extend %title;
@@ -61,14 +81,54 @@ main {
     .description {
       color: $main_color;
     }
-    .hero__images{
-        gap: 100px;
-        @include imagesHero();
+    .hero__images {
+      gap: 100px;
+      @include imagesHero();
     }
-  
   }
-  .about__section{
+  .about__section {
     width: 100%;
     background: $main_color;
+    .mark__section {
+      @extend %mark;
+      background: white;
+    }
+
+    @include imagesabout();
+  }
+  .menu__section {
+    .mark__section {
+      @extend %mark;
+      background: $main_color;
+    }
+    .title__section {
+      color: $main_color;
+    }
+    .menu__container {
+      .col {
+        margin: 0;
+        padding: 0;
+      }
+      span {
+        display: none;
+      }
+      img {
+        transition: scale 1s ease-in-out;
+        object-fit: cover;
+        height: 300px;
+        width: 100%;
+      }
+      a {
+        color: white;
+        &:hover {
+          span {
+            display: flex;
+          }
+          img {
+            scale: 110%;
+          }
+        }
+      }
+    }
   }
 }

@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Chewy&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+main .menu__section .mark__section, main .about__section .mark__section {
+  width: 25px;
+  height: 25px;
+}
+
 main .hero__section .title, header span {
   font-family: "Chewy", serif;
   color: #ca4a3a;
@@ -66,4 +71,46 @@ main .hero__section .hero__images .image-3 {
 main .about__section {
   width: 100%;
   background: #ca4a3a;
+}
+main .about__section .mark__section {
+  background: white;
+}
+main .about__section .image-about-1 {
+  background: url("/images/kioto/about-1.webp");
+  background-size: cover;
+  height: 500px;
+}
+main .about__section .image-about-2 {
+  background: url("/images/kioto/about-2.jpg");
+  background-size: cover;
+  height: 500px;
+}
+main .menu__section .mark__section {
+  background: #ca4a3a;
+}
+main .menu__section .title__section {
+  color: #ca4a3a;
+}
+main .menu__section .menu__container .col {
+  margin: 0;
+  padding: 0;
+}
+main .menu__section .menu__container span {
+  display: none;
+}
+main .menu__section .menu__container img {
+  transition: scale 1s ease-in-out;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 300px;
+  width: 100%;
+}
+main .menu__section .menu__container a {
+  color: white;
+}
+main .menu__section .menu__container a:hover span {
+  display: flex;
+}
+main .menu__section .menu__container a:hover img {
+  scale: 110%;
 }/*# sourceMappingURL=kioto.css.map */

@@ -22,7 +22,7 @@
   <body>
     <header>
       <nav
-        class="px-3 px-md-5 py-5 container-fluid nav navbar d-flex align-items-center justify-content-between"
+        class="px-3 px-md-5 py-3 container-fluid nav navbar d-flex align-items-center justify-content-between"
       >
         <span class="fs-1">KIOTO</span>
         <button
@@ -55,11 +55,13 @@
       </nav>
     </header>
     <main>
-      <section class="hero__section">
+      <section class="hero__section min-vh-100">
         <div class="container">
           <div class="row row-cols-1 text-center">
             <div class="col">
-              <h1 class="title">This is where tradition meets innovation</h1>
+              <h1 class="title">
+                Aquí és on la tradició es troba amb la innovació.
+              </h1>
             </div>
             <div class="col mb-5">
               <h5 class="description fw-light">
@@ -77,12 +79,144 @@
           </div>
         </div>
       </section>
-      <section class="about__section">
-        <div class="container text-white">
-          <div class="pt-5 row">
-            <div class="col-12">
-              <h2 class="fw-bold text-center">About Us</h2>
+      <section class="about__section text-white min-vh-100">
+        <div class="container">
+          <div class="pt-5 row row-cols-1">
+            <div
+              class="col d-flex gap-2 justify-content-center align-items-center"
+            >
+              <div class="mark__section"></div>
+              <span class="fw-lighter fs-2 text-center"> Coneix-nos</span>
             </div>
+            <div class="col d-flex flex-column gap-3 text-center">
+              <h2 class="fs-1 fw-bolder">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </h2>
+              <p class="fw-normal">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias,
+                eveniet tempore? Facilis voluptatibus, corporis molestiae, quae
+                reprehenderit distinctio iste libero, velit laboriosam corrupti
+                asperiores! Neque dolore ea quasi recusandae voluptatum?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="px-5 mt-5 container-fluid">
+          <div class="row row-cols-4">
+            <div class="col image-about-1 rounded-3"></div>
+            <div class="col d-flex flex-column justify-content-around">
+              <div>
+                <h3 class="fw-bold">Our Vision</h3>
+                <p class="p-3 fw-lighter">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Maxime, inventore, eligendi dolores nemo expedita sequi dicta
+                  quas laudantium debitis, doloremque fugiat nesciunt veritatis!
+                  Harum, odit atque itaque magnam doloribus illo!
+                </p>
+              </div>
+
+              <div>
+                <h3 class="fw-bold">Our Cheff</h3>
+                <p class="p-3 fw-lighter">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Maxime, inventore, eligendi dolores nemo expedita sequi dicta
+                  quas laudantium debitis, doloremque fugiat nesciunt veritatis!
+                  Harum, odit atque itaque magnam doloribus illo!
+                </p>
+              </div>
+            </div>
+            <div class="col d-flex flex-column justify-content-around">
+              <div>
+                <h3 class="fw-bold">Our Speciality</h3>
+                <p class="p-3 fw-lighter">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Maxime, inventore, eligendi dolores nemo expedita sequi dicta
+                  quas laudantium debitis, doloremque fugiat nesciunt veritatis!
+                  Harum, odit atque itaque magnam doloribus illo!
+                </p>
+              </div>
+              <div>
+                <h3 class="fw-bold">Our Speciality</h3>
+                <p class="p-3 fw-lighter">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Maxime, inventore, eligendi dolores nemo expedita sequi dicta
+                  quas laudantium debitis, doloremque fugiat nesciunt veritatis!
+                  Harum, odit atque itaque magnam doloribus illo!
+                </p>
+              </div>
+            </div>
+            <div class="col image-about-2 rounded-3"></div>
+          </div>
+        </div>
+      </section>
+      <section class="menu__section min-vh-100">
+        <div class="container">
+          <div class="pt-5 row row-cols-1">
+            <div
+              class="col d-flex gap-2 justify-content-center align-items-center"
+            >
+              <div class="mark__section"></div>
+              <span class="title__section fw-lighter fs-2 text-center"
+                >Els nostres menús</span
+              >
+            </div>
+            <div class="col d-flex flex-column gap-3 text-center">
+              <h2 class="fs-1">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              </h2>
+              <p class="fw-lighter text-secondary">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Expedita minima excepturi recusandae velit, numquam suscipit a.
+                Quaerat veniam, dolor ab illo accusantium sint maiores,
+                blanditiis rerum inventore corrupti iusto dolore!
+              </p>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center">
+            <div
+              class="btn-group btn-group-lg"
+              role="group"
+              aria-label="Large button group"
+            >
+              <button type="button" class="btn btn-outline-danger">Dia</button>
+              <button type="button" class="btn btn-outline-danger">Nit</button>
+              <button type="button" class="btn btn-outline-danger">
+                Cap de Setmana
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="px-5 pt-5 container-fluid">
+          <div class="row row-cols-4 menu__container">
+            <a class="col position-relative overflow-hidden rounded-3">
+              <img src="/images/kioto/hero-1.jpeg" alt="" />
+              <div class="position-absolute top-50 start-50 translate-middle d-flex flex-column align-items-center gap-2">
+                <span class="fs-1 fw-bolder">Menu/Dia</span>
+                <span class="fs-5 fw-bold">12:00 / 16:00</span>
+              </div>
+            </a>
+            <a class="col position-relative overflow-hidden rounded-3">
+              <img src="/images/kioto/hero-1.jpeg" alt="" />
+              <div class="position-absolute top-50 start-50 translate-middle d-flex flex-column align-items-center gap-2">
+                <span class="fs-1 fw-bolder">Menu/Dia</span>
+                <span class="fs-5 fw-bold">12:00 / 16:00</span>
+              </div>
+            </a>
+            <a class="col position-relative overflow-hidden rounded-3">
+              <img src="/images/kioto/hero-1.jpeg" alt="" />
+              <div class="position-absolute top-50 start-50 translate-middle d-flex flex-column align-items-center gap-2">
+                <span class="fs-1 fw-bolder">Menu/Dia</span>
+                <span class="fs-5 fw-bold">12:00 / 16:00</span>
+              </div>
+            </a>
+            <a class="col position-relative overflow-hidden rounded-3">
+              <img src="/images/kioto/hero-1.jpeg" alt="" />
+              <div class="position-absolute top-50 start-50 translate-middle d-flex flex-column align-items-center gap-2">
+                <span class="fs-1 fw-bolder">Menu/Dia</span>
+                <span class="fs-5 fw-bold">12:00 / 16:00</span>
+              </div>
+            </a>
+            
           </div>
         </div>
       </section>
