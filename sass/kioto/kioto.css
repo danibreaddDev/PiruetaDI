@@ -20,7 +20,7 @@
   height: 25px;
 }
 
-footer .footer__title h1, footer .asked__questions, main .menu__section .menu__container .slogan, main .title__section, main .about__section .feature, main .menu__section .menu__container .menu__info, main .hero__section .title, header span {
+footer .footer__title h1, footer .asked__questions, main .menu__section .menu__container .slogan, main .title__section, main .about__section .feature, .carta, main .menu__section .menu__container .menu__info, main .hero__section .title, header span {
   font-family: fontJapan;
 }
 
@@ -48,6 +48,17 @@ header .btn__reserva:hover {
   border-radius: 10px;
   background: #ca4a3a;
   color: white;
+}
+
+.carta {
+  color: #ca4a3a;
+  text-decoration: none;
+}
+.carta:hover {
+  -webkit-text-decoration: wavy;
+          text-decoration: wavy;
+  text-decoration-line: underline;
+  text-underline-offset: 10px;
 }
 
 main .hero__section .title {

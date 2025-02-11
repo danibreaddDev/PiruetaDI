@@ -1,0 +1,55 @@
+//aqui usar pseudoclases
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@font-face {
+  font-family: fontJapan;
+  src: url("/fonts/Japan\ wave.ttf");
+}
+$main_color: #ca4a3a;
+
+%font {
+  font-family: fontJapan;
+  color: $main_color;
+}
+
+header {
+  .col {
+    > a {
+      @extend %font;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      &:hover {
+        text-decoration: wavy;
+        text-decoration-line: underline;
+        text-underline-offset: 10px;
+      }
+    }
+    > button {
+      width: 100%;
+      @extend %font;
+      border: none;
+      background: none;
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+      &:hover {
+        text-decoration: wavy;
+        text-decoration-line: underline;
+        text-underline-offset: 10px;
+      }
+    }
+  }
+}
+section {
+  h2 {
+    @extend %font;
+  }
+}
+.element__menu {
+  > img {
+    width: 300px;
+  }
+  .price {
+    font-size: clamp(14px, 10vw, 60px);
+  }
+}

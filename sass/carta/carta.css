@@ -1,1 +1,42 @@
-/*# sourceMappingURL=carta.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@font-face {
+  font-family: fontJapan;
+  src: url("/fonts/Japan wave.ttf");
+}
+section h2, header .col > button, header .col > a {
+  font-family: fontJapan;
+  color: #ca4a3a;
+}
+
+header .col > a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+header .col > a:hover {
+  -webkit-text-decoration: wavy;
+          text-decoration: wavy;
+  text-decoration-line: underline;
+  text-underline-offset: 10px;
+}
+header .col > button {
+  width: 100%;
+  border: none;
+  background: none;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+header .col > button:hover {
+  -webkit-text-decoration: wavy;
+          text-decoration: wavy;
+  text-decoration-line: underline;
+  text-underline-offset: 10px;
+}
+
+.element__menu > img {
+  width: 300px;
+}
+.element__menu .price {
+  font-size: clamp(14px, 10vw, 60px);
+}/*# sourceMappingURL=carta.css.map */

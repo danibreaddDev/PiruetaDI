@@ -93,6 +93,16 @@ header {
     }
   }
 }
+.carta {
+  @extend %font;
+  color: $main_color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: wavy;
+    text-decoration-line: underline;
+    text-underline-offset: 10px;
+  }
+}
 main {
   .hero__section {
     .title {
@@ -102,7 +112,7 @@ main {
     }
     .description {
       color: $main_color;
-      font-size: clamp(14px,5vw,22px);
+      font-size: clamp(14px, 5vw, 22px);
     }
     .hero__images {
       gap: 100px;
@@ -119,7 +129,7 @@ main {
       color: $main_color;
     }
     width: 100%;
-    
+
     .mark__section {
       @extend %mark;
       background: $main_color;
@@ -136,7 +146,7 @@ main {
       @extend %mark;
       background: $main_color;
     }
-
+    
     .menu__container {
       .col {
         margin: 0;
