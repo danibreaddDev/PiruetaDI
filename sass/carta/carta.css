@@ -3,13 +3,16 @@
   font-family: fontJapan;
   src: url("/fonts/Japan wave.ttf");
 }
-section h2, header .col > button, header .col > a {
+section h2, header .col > button, header .col > a, header .title {
   font-family: fontJapan;
   color: #ca4a3a;
 }
 
-header .col > a {
+a {
   text-decoration: none;
+}
+
+header .col > a {
   display: flex;
   justify-content: center;
 }
@@ -39,4 +42,12 @@ header .col > button:hover {
 }
 .element__menu .price {
   font-size: clamp(14px, 10vw, 60px);
+}
+
+#message img {
+  width: 100px;
+  height: 100px;
+}
+#message img:hover {
+  transform: rotate(10deg);
 }/*# sourceMappingURL=carta.css.map */

@@ -1,13 +1,23 @@
+//importaciones
 import { menu } from "./menu.js";
 //variables
 const section_menu = document.getElementById("menu");
+const section_message = document.getElementById("message");
 const buttons = document.querySelectorAll("button");
+//funciones
 function showSection(container, section_clicked) {
   container.innerHTML = "";
   let menu_container = document.createElement("div");
   let row_title = document.createElement("div");
   let row_menu = document.createElement("div");
-  row_menu.classList.add("mt-5","mt-sm-0","row","row-cols-1","row-cols-xxl-2","g-sm-5");
+  row_menu.classList.add(
+    "mt-5",
+    "mt-sm-0",
+    "row",
+    "row-cols-1",
+    "row-cols-xxl-2",
+    "g-sm-5"
+  );
   menu_container.classList.add("px-3", "px-sm-5", "container");
   row_title.classList.add("row");
   menu[section_clicked].forEach((food, index) => {
@@ -82,8 +92,10 @@ function showSection(container, section_clicked) {
   console.log(container);
   console.log(section_clicked);
 }
+//eventos
 buttons.forEach((boton) => {
   boton.addEventListener("click", () => {
+    section_message.style.display = "none";
     const section_value = boton.innerText;
     showSection(section_menu, section_value);
   });

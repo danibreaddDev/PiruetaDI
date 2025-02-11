@@ -10,12 +10,18 @@ $main_color: #ca4a3a;
   font-family: fontJapan;
   color: $main_color;
 }
-
+a {
+  text-decoration: none;
+}
 header {
+  .title {
+    @extend %font;
+  }
+
   .col {
     > a {
       @extend %font;
-      text-decoration: none;
+
       display: flex;
       justify-content: center;
       &:hover {
@@ -51,5 +57,14 @@ section {
   }
   .price {
     font-size: clamp(14px, 10vw, 60px);
+  }
+}
+#message {
+  img {
+    width: 100px;
+    height: 100px;
+    &:hover {
+      transform: rotate(10deg);
+    }
   }
 }
