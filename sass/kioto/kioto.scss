@@ -1,6 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @font-face {
   font-family: fontJapan;
   src: url("/fonts/Japan\ wave.ttf");
+}
+@keyframes iconMove {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+    scale: 125%;
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 @mixin imagesHero {
   @for $i from 1 through 3 {
@@ -89,6 +102,7 @@ main {
     }
     .description {
       color: $main_color;
+      font-size: clamp(14px,5vw,22px);
     }
     .hero__images {
       gap: 100px;
@@ -98,15 +112,17 @@ main {
   .about__section {
     .about__title {
       font-family: fontJapan;
+      color: $main_color;
     }
     .feature {
       @extend %font;
+      color: $main_color;
     }
     width: 100%;
-    background: $main_color;
+    
     .mark__section {
       @extend %mark;
-      background: white;
+      background: $main_color;
     }
 
     @include imagesabout();
@@ -135,11 +151,13 @@ main {
       img {
         transition: scale 1s ease-in-out, filter 1s ease-in-out;
         object-fit: cover;
+        object-position: top;
         height: 300px;
         width: 100%;
       }
       a {
         color: white;
+        cursor: pointer;
         &:hover {
           span {
             display: flex;

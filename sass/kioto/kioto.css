@@ -1,6 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @font-face {
   font-family: fontJapan;
   src: url("/fonts/Japan wave.ttf");
+}
+@keyframes iconMove {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+    scale: 125%;
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 .specialday__section .mark__section, main .menu__section .mark__section, main .about__section .mark__section {
   width: 25px;
@@ -43,6 +56,7 @@ main .hero__section .title {
 }
 main .hero__section .description {
   color: #ca4a3a;
+  font-size: clamp(14px, 5vw, 22px);
 }
 main .hero__section .hero__images {
   gap: 100px;
@@ -94,13 +108,16 @@ main .hero__section .hero__images .image-3 {
 }
 main .about__section {
   width: 100%;
-  background: #ca4a3a;
 }
 main .about__section .about__title {
   font-family: fontJapan;
+  color: #ca4a3a;
+}
+main .about__section .feature {
+  color: #ca4a3a;
 }
 main .about__section .mark__section {
-  background: white;
+  background: #ca4a3a;
 }
 main .about__section .image-about-1 {
   background: url("/images/kioto/about-1.webp");
@@ -129,11 +146,14 @@ main .menu__section .menu__container img {
   transition: scale 1s ease-in-out, filter 1s ease-in-out;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
   height: 300px;
   width: 100%;
 }
 main .menu__section .menu__container a {
   color: white;
+  cursor: pointer;
 }
 main .menu__section .menu__container a:hover span {
   display: flex;

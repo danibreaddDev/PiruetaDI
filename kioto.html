@@ -22,9 +22,11 @@
   <body>
     <header>
       <nav
-        class="px-3 px-md-5 py-3 container-fluid nav navbar d-flex align-items-center justify-content-between"
+        class="px-3 px-md-5 py-3 container-fluid nav navbar d-flex flex-sm-row flex-column gap-3 align-items-center justify-content-between"
       >
-        <span class="fs-1">KIOTO</span>
+        <span class="fs-1"
+          >KIOTO <strong class="fs-4">per Pirueta</strong></span
+        >
         <button
           class="btn"
           type="button"
@@ -64,14 +66,16 @@
               </h1>
             </div>
             <div class="col mb-5">
-              <h5 class="description fw-light">
+              <h5 class="description fw-lighter text-secondary">
                 Fugem receptes respectades pel temps amb un gir contemporani.
                 oferinte una experiència gastronòmica com cap altra. Tant si
                 teniu ganes suma tènue clàssica o un plat de fusió de moda.
                 tenim alguna cosa que excitara el teu paladar.
               </h5>
             </div>
-            <div class="hero__images mt-5 col d-flex flex-wrap flex-md-row justify-content-center">
+            <div
+              class="hero__images mt-5 col d-flex flex-wrap flex-md-row justify-content-center"
+            >
               <div class="image-1 rounded-3"></div>
               <div class="image-2 d-none d-xl-flex rounded-3"></div>
               <div class="image-3 rounded-3"></div>
@@ -79,7 +83,7 @@
           </div>
         </div>
       </section>
-      <section class="about__section text-white min-vh-100">
+      <section class="about__section text-black min-vh-100">
         <div class="py-5 container">
           <div class="row row-cols-1">
             <div
@@ -91,59 +95,90 @@
               >
             </div>
             <div class="col d-flex flex-column gap-3 text-center">
-              <h2 class="fs-1 fw-bolder">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              <h2 class="fs-1">
+                Descobreix l'essència de Kioto en cada mossegada.
               </h2>
-              <p class="fw-normal">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias,
-                eveniet tempore? Facilis voluptatibus, corporis molestiae, quae
-                reprehenderit distinctio iste libero, velit laboriosam corrupti
-                asperiores! Neque dolore ea quasi recusandae voluptatum?
+              <p class="fw-normal text-secondary">
+                Benvingut a Kioto per <strong>Pirueta</strong>, un restaurant
+                inspirat en l'encant i la tradició de Kioto. Aquí, et convidem a
+                viure una experiència gastronòmica única, on cada plat explica
+                una història i cada detall et transporta als carrers empedrats i
+                als temples serens de l'antiga capital japonesa.
               </p>
             </div>
           </div>
         </div>
         <div class="px-5 py-5 container-fluid">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-5">
             <div class="col image-about-1 rounded-3"></div>
             <div class="pt-5 pt-sm-0 d-flex flex-column justify-content-around">
               <div>
-                <h3 class="fw-bold feature">Our Vision</h3>
-                <p class="p-3 fw-lighter">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Maxime, inventore, eligendi dolores nemo expedita sequi dicta
-                  quas laudantium debitis, doloremque fugiat nesciunt veritatis!
-                  Harum, odit atque itaque magnam doloribus illo!
+                <h3 class="fw-bold feature">La nostra visió</h3>
+                <p class="p-3 fw-lighter text-secondary">
+                  Creiem en l'autenticitat i el respecte per la tradició
+                  culinària de Kioto. La nostra missió és oferir una experiència
+                  immersiva, amb plats elaborats segons tècniques centenàries i
+                  amb ingredients frescos i seleccionats acuradament. Ens
+                  esforcem per transmetre l'essència del "kaiseki ryori", la
+                  gastronomia tradicional japonesa d'alta cuina, on cada mos és
+                  un equilibri de sabors, textures i presentació.
                 </p>
               </div>
 
               <div>
-                <h3 class="fw-bold feature">Our Cheff</h3>
-                <p class="p-3 fw-lighter">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Maxime, inventore, eligendi dolores nemo expedita sequi dicta
-                  quas laudantium debitis, doloremque fugiat nesciunt veritatis!
-                  Harum, odit atque itaque magnam doloribus illo!
+                <h3 class="fw-bold feature">El nostre xef</h3>
+                <p class="p-3 fw-lighter text-secondary">
+                  El nostre xef,
+                  <strong class="fw-bold">Hiroshi Takeda</strong>, ha estat
+                  format a les millors escoles de cuina de Kioto i ha treballat
+                  en reconeguts ryotei (restaurants tradicionals japonesos). Amb
+                  una passió inigualable per la gastronomia, el xef Takeda
+                  combina la saviesa ancestral amb una presentació exquisida per
+                  oferir plats que són veritables obres d'art.
                 </p>
               </div>
             </div>
             <div class="col d-flex flex-column justify-content-around">
               <div>
-                <h3 class="fw-bold feature">Our Speciality</h3>
-                <p class="p-3 fw-lighter">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Maxime, inventore, eligendi dolores nemo expedita sequi dicta
-                  quas laudantium debitis, doloremque fugiat nesciunt veritatis!
-                  Harum, odit atque itaque magnam doloribus illo!
-                </p>
+                <h3 class="fw-bold feature">La nostra especialitat</h3>
+                <div class="p-3 fw-lighter text-secondary">
+                  <p>Ens especialitzem en plats icònics de Kioto, com ara:</p>
+                  <ul class="list-unstyled">
+                    <li>
+                      <strong class="fw-bold">Kaiseki Ryori</strong>: Un menú
+                      degustació de diversos plats harmonitzats segons la
+                      temporada.
+                    </li>
+                    <li>
+                      <strong class="fw-bold">Yudofu</strong>: Tofu suau cuit a
+                      foc lent amb un brou suau i perfumat, molt popular als
+                      temples de Kioto.
+                    </li>
+                    <li>
+                      <strong class="fw-bold">Obanzai</strong>: Una selecció de
+                      plats casolans tradicionals basats en ingredients locals i
+                      de temporada.
+                    </li>
+                    <li>
+                      <strong class="fw-bold">Saba-zushi</strong>: Sushi premsat
+                      amb verat marinat, un dels plats més emblemàtics de Kioto.
+                    </li>
+                    <li>
+                      <strong class="fw-bold">Matcha i Wagashi</strong>: Postres
+                      tradicionals acompanyades de te verd matcha de la millor
+                      qualitat.
+                    </li>
+                  </ul>
+                </div>
               </div>
               <div>
-                <h3 class="fw-bold feature">Our Speciality</h3>
-                <p class="p-3 fw-lighter">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Maxime, inventore, eligendi dolores nemo expedita sequi dicta
-                  quas laudantium debitis, doloremque fugiat nesciunt veritatis!
-                  Harum, odit atque itaque magnam doloribus illo!
+                <p class="p-3 fw-lighter text-secondary">
+                  Vine i deixa’t captivar per la màgia i la delicadesa de la
+                  cuina de Kioto.
+                  <strong class="fw-bold"
+                    >T’esperem per oferir-te una experiència gastronòmica
+                    inoblidable!</strong
+                  >
                 </p>
               </div>
             </div>
@@ -164,14 +199,26 @@
             </div>
             <div class="col d-flex flex-column gap-3 text-center">
               <h2 class="fs-1">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Oferim dues experiències gastronòmiques diferenciades segons el
+                moment de la setmana
               </h2>
-              <p class="fw-lighter text-secondary">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Expedita minima excepturi recusandae velit, numquam suscipit a.
-                Quaerat veniam, dolor ab illo accusantium sint maiores,
-                blanditiis rerum inventore corrupti iusto dolore!
-              </p>
+              <div class="flex flex-column gap-3 fw-lighter text-secondary">
+                <p>
+                  <strong class="fw-medium">Menú Hanabi (Cap de Setmana)</strong>: Inspirat en les festes i
+                  celebracions de Kioto, aquest menú inclou plats més elaborats
+                  i sofisticats, ideals per gaudir d'una vetllada especial amb
+                  amics o família. Amb ingredients d'alta qualitat i
+                  presentacions artístiques, aquest menú reflecteix l'esperit
+                  festiu de la ciutat.
+                </p>
+                <p>
+                  <strong class="fw-medium">Menú Taisha (Entre Setmana)</strong>: Pensat per al dia a dia, aquest
+                  menú ofereix plats casolans i equilibrats, seguint l'estil de
+                  la cuina tradicional de Kioto. Amb opcions lleugeres i
+                  nutritives, és perfecte per a un àpat relaxat en un ambient
+                  acollidor.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -182,22 +229,22 @@
             <div class="d-flex flex-column">
               <h4 class="fs-2 text-center">Entre setmana</h4>
               <a class="col position-relative overflow-hidden rounded-3">
-                <img src="/images/kioto/hero-1.jpeg" alt="" />
+                <img src="/images/kioto/menu-1.jpeg" alt="" />
                 <div
                   class="position-absolute top-50 start-50 translate-middle menu__info"
                 >
-                  <span class="fs-1 fw-bolder text-white">Menu</span>
+                  <span class="fs-1 fw-bolder text-white">Menu Taisha </span>
                 </div>
               </a>
             </div>
             <div class="d-flex flex-column">
               <h4 class="fs-2 text-center">Cap de setmana</h4>
               <a class="col position-relative overflow-hidden rounded-3">
-                <img src="/images/kioto/hero-1.jpeg" alt="" />
+                <img src="/images/kioto/menu-2.jpg" alt="" />
                 <div
                   class="position-absolute top-50 start-50 translate-middle menu__info"
                 >
-                  <span class="fs-1 fw-bolder text-white">Menu</span>
+                  <span class="fs-1 fw-bolder text-white">Menu Hanabi</span>
                 </div>
               </a>
             </div>
@@ -232,7 +279,9 @@
           </div>
           <div class="py-5 px-5 row row-cols-1 row-cols-md-2">
             <div class="col d-flex flex-column justify-content-center">
-              <h3 class="fs-2 fw-bolder title__section">Sopar Temàtic amb Yukates</h3>
+              <h3 class="fs-2 fw-bolder title__section">
+                Sopar Temàtic amb Yukates
+              </h3>
               <p class="fw-lighter text-secondary">
                 Per fer aquesta nit encara més especial, et convidem al nostre
                 <strong>sopar temàtic</strong> on podràs vestir un
