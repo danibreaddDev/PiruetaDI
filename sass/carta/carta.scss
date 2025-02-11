@@ -17,6 +17,27 @@ header {
   .title {
     @extend %font;
   }
+  @keyframes lightOn {
+    0% {
+      filter: contrast(100%);
+      bottom: 100px;
+    }
+    50% {
+      filter: contrast(150%);
+      bottom: 50px;
+    }
+    100% {
+      filter: contrast(250%);
+      bottom: 0;
+    }
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+    animation: lightOn 2s linear forwards;
+  }
 
   .col {
     > a {
@@ -33,6 +54,7 @@ header {
     > button {
       width: 100%;
       @extend %font;
+      font-size: x-large;
       border: none;
       background: none;
       display: flex;
@@ -57,14 +79,5 @@ section {
   }
   .price {
     font-size: clamp(14px, 10vw, 60px);
-  }
-}
-#message {
-  img {
-    width: 100px;
-    height: 100px;
-    &:hover {
-      transform: rotate(10deg);
-    }
   }
 }

@@ -12,6 +12,26 @@ a {
   text-decoration: none;
 }
 
+@keyframes lightOn {
+  0% {
+    filter: contrast(100%);
+    bottom: 100px;
+  }
+  50% {
+    filter: contrast(150%);
+    bottom: 50px;
+  }
+  100% {
+    filter: contrast(250%);
+    bottom: 0;
+  }
+}
+header img {
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+  animation: lightOn 2s linear forwards;
+}
 header .col > a {
   display: flex;
   justify-content: center;
@@ -24,6 +44,7 @@ header .col > a:hover {
 }
 header .col > button {
   width: 100%;
+  font-size: x-large;
   border: none;
   background: none;
   display: flex;
@@ -42,12 +63,4 @@ header .col > button:hover {
 }
 .element__menu .price {
   font-size: clamp(14px, 10vw, 60px);
-}
-
-#message img {
-  width: 100px;
-  height: 100px;
-}
-#message img:hover {
-  transform: rotate(10deg);
 }/*# sourceMappingURL=carta.css.map */
