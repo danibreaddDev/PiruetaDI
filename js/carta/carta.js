@@ -22,7 +22,7 @@ function showSection(container, section_clicked) {
   row_title.classList.add("row");
   menu[section_clicked].forEach((food, index) => {
     let element_menu = document.createElement("div");
-    if (index % 2 == 0) {
+    if (index % 2 === 0) {
       element_menu.classList.add(
         "element__menu",
         "col",
