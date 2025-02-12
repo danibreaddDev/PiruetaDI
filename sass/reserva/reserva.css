@@ -1,1 +1,17 @@
-/*# sourceMappingURL=reserva.css.map */
+.calendario > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.calendario > div table {
+  border-collapse: collapse;
+  text-align: center;
+}
+.calendario > div th,
+.calendario > div td {
+  border: 1px solid black;
+  padding: 10px;
+}
+.calendario > div th {
+  background-color: #f2f2f2;
+}/*# sourceMappingURL=reserva.css.map */

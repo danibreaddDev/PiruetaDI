@@ -23,9 +23,147 @@
 
   <body>
     <header>
-      <!-- place navbar here -->
+      <nav>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 text-center">
+              <span class="display-1 fs-1">Pirueta</span>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
-    <main>
+    <main class="px-md-5">
+      <div
+        class="mt-5 container border rounded-3"
+        id="menu"
+        style="display: none"
+      >
+        <div class="row">
+          <div class="col text-center">
+            <h1 id="restaurant"></h1>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-3">
+          <div class="col d-flex flex-column justify-content-center align-items-center">
+            <div class="row row-cols-1">
+              <div class="col">
+                <h3>Nombre de Persones</h3>
+                <div class="input-group mb-3">
+                  <label class="input-group-text" for="inputGroupSelect01"
+                    ><span class="fw-bold">Asistents</span></label
+                  >
+                  <select class="form-select" id="inputGroupSelect01" name="persons">
+                    <option selected>Elegeix</option>
+                    <option value="1">1 persona</option>
+                    <option value="2">2 persones</option>
+                    <option value="3">3 persones</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col">
+                <h3>Zona</h3>
+                <div class="input-group mb-3">
+                  <label class="input-group-text" for="inputGroupSelect01"
+                    ><span class="fw-bold">Zona</span></label
+                  >
+                  <select class="form-select" id="inputGroupSelect01" name="zone">
+                    <option selected>Elegeix</option>
+                    <option value="terraza">Terraza</option>
+                    <option value="interior">Interior</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col d-flex flex-column align-items-center">
+                <h3>Hores Disponibles</h3>
+                <div class="input-group mb-3">
+                  <label class="input-group-text" for="inputGroupSelect01"
+                    ><span class="fw-bold">Hores disponibles</span></label
+                  >
+                  <select class="form-select" id="inputGroupSelect01" name="hour">
+                    <option selected>Elegeix</option>
+                    <option value="12">12:00H</option>
+                    <option value="13">13:00H</option>
+                    <option value="14">14:00H</option>
+                    <option value="15">15:00H</option>
+                    <option value="20">20:00H</option>
+                    <option value="21">21:00H</option>
+                    <option value="22">22:00H</option>
+                    <option value="23">23:00H</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="calendario col d-flex flex-column align-items-center">
+            <div>
+              <h2>Calendario de Febrero</h2>
+              <table>
+                <tr>
+                  <th>L</th>
+                  <th>M</th>
+                  <th>Mi</th>
+                  <th>J</th>
+                  <th>V</th>
+                  <th>S</th>
+                  <th>D</th>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>7</td>
+                  <td>8</td>
+                  <td>9</td>
+                  <td>10</td>
+                  <td>11</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>13</td>
+                  <td>14</td>
+                  <td>15</td>
+                  <td>16</td>
+                  <td>17</td>
+                  <td>18</td>
+                </tr>
+                <tr>
+                  <td>19</td>
+                  <td>20</td>
+                  <td>21</td>
+                  <td>22</td>
+                  <td>23</td>
+                  <td>24</td>
+                  <td>25</td>
+                </tr>
+                <tr>
+                  <td>26</td>
+                  <td>27</td>
+                  <td>28</td>
+                  <td>29</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+         
+        </div>
+        <div class="row">
+          <div class="py-5 col-12">
+            <button class="btn btn-dark w-100" id="reserva">Reservar</button>
+          </div>
+        </div>
+      </div>
       <!-- Modal -->
       <div
         class="modal fade show"
