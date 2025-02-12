@@ -26,8 +26,8 @@
       <nav>
         <div class="container-fluid">
           <div class="row">
-            <div class="col-12 text-center">
-              <span class="display-1 fs-1">Pirueta</span>
+            <div class="py-3 col-12 text-center">
+              <a href="principal.html"><span class="display-1 fs-1">Pirueta</span></a>
             </div>
           </div>
         </div>
@@ -35,17 +35,19 @@
     </header>
     <main class="px-md-5">
       <div
-        class="mt-5 container border rounded-3"
+        class="mt-5 p-5 container border rounded-3"
         id="menu"
         style="display: none"
       >
         <div class="row">
-          <div class="col text-center">
-            <h1 id="restaurant"></h1>
+          <div class="py-5 col text-center">
+            <h2 id="restaurant" class="restaurant__name"></h2>
           </div>
         </div>
         <div class="row row-cols-1 row-cols-md-2 g-3">
-          <div class="col d-flex flex-column justify-content-center align-items-center">
+          <div
+            class="col d-flex flex-column justify-content-center align-items-center"
+          >
             <div class="row row-cols-1">
               <div class="col">
                 <h3>Nombre de Persones</h3>
@@ -53,7 +55,11 @@
                   <label class="input-group-text" for="inputGroupSelect01"
                     ><span class="fw-bold">Asistents</span></label
                   >
-                  <select class="form-select" id="inputGroupSelect01" name="persons">
+                  <select
+                    class="form-select"
+                    id="inputGroupSelect01"
+                    name="persons"
+                  >
                     <option selected>Elegeix</option>
                     <option value="1">1 persona</option>
                     <option value="2">2 persones</option>
@@ -67,7 +73,11 @@
                   <label class="input-group-text" for="inputGroupSelect01"
                     ><span class="fw-bold">Zona</span></label
                   >
-                  <select class="form-select" id="inputGroupSelect01" name="zone">
+                  <select
+                    class="form-select"
+                    id="inputGroupSelect01"
+                    name="zone"
+                  >
                     <option selected>Elegeix</option>
                     <option value="terraza">Terraza</option>
                     <option value="interior">Interior</option>
@@ -80,7 +90,11 @@
                   <label class="input-group-text" for="inputGroupSelect01"
                     ><span class="fw-bold">Hores disponibles</span></label
                   >
-                  <select class="form-select" id="inputGroupSelect01" name="hour">
+                  <select
+                    class="form-select"
+                    id="inputGroupSelect01"
+                    name="hour"
+                  >
                     <option selected>Elegeix</option>
                     <option value="12">12:00H</option>
                     <option value="13">13:00H</option>
@@ -97,7 +111,7 @@
           </div>
           <div class="calendario col d-flex flex-column align-items-center">
             <div>
-              <h2>Calendario de Febrero</h2>
+              <h2>Calendari de Febrer</h2>
               <table>
                 <tr>
                   <th>L</th>
@@ -156,13 +170,74 @@
               </table>
             </div>
           </div>
-         
         </div>
-        <div class="row">
-          <div class="py-5 col-12">
-            <button class="btn btn-dark w-100" id="reserva">Reservar</button>
+        <div class="py-5 row">
+          <div class="p-2 col-12 text-center text-md-start">
+            <button class="btn" id="reserva">Reservar</button>
           </div>
         </div>
+      </div>
+      <!--confirmacion usuario-->
+      <div
+        class="mt-5 p-5 container border rounded-3"
+        id="userConfirm"
+        style="display: none"
+      >
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2 class="fw-light text-secondary">
+              Viu la experiencia <span>Pirueta</span>,
+              <strong class="fw-bold">Finalitza</strong> la teua reserva.
+            </h2>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2">
+          <div class="col">
+            <fieldset class="d-flex flex-column fw-light">
+              <label for="name">Nom: </label>
+              <input type="text" name="name" class="py-2 px-3" />
+              <label for="surnames">Cognoms: </label>
+              <input
+                type="text"
+                name="surnames"
+                class="py-2 px-3"
+                placeholder="Ej. García Fernández"
+              />
+              <label for="email">Email: </label>
+              <input type="email" name="email" class="py-2 px-3" />
+              <label for="phone">Telefon: </label>
+              <input type="text" name="phone" class="py-2 px-3" />
+              <div class="d-flex align-items-center gap-2">
+                <input type="checkbox" />
+                <span>Acepta els termes de privacitat.</span>
+              </div>
+            </fieldset>
+          </div>
+          <div class="pirueta col d-flex flex-column">
+            <div class="img-form"></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="py-5 row">
+          <div class="p-2 col text-center text-md-start">
+            <button class="btn" id="confirm">Finalitza la reserva</button>
+          </div>
+        </div>
+      </div>
+      <!--Loading-->
+      <div class="container min-vh-100" id="loading" style="display: none;">
+        <div class="d-flex flex-column gap-3">
+          <h1 class="fw-medium">
+            Procesando su <strong class="fw-bold">Reserva</strong>
+          </h1>
+          <p class="fw-light text-secondary">Espere unos instantes...</p>
+        </div>
+
+        <img src="/images/reserva/loading.gif" alt="" srcset="" />
+      </div>
+      <!--Reserva confirmada-->
+      <div class="p-5 container" id="ConfirmedReserva">
+
       </div>
       <!-- Modal -->
       <div
@@ -182,23 +257,19 @@
             <div class="modal-body">
               <div class="container">
                 <div class="row text-center">
-                  <h2>Elegeix El restaurant</h2>
+                  <h2 class="fw-medium text-secondary">
+                    Elegeix El restaurant
+                  </h2>
                 </div>
-                <div class="row">
+                <div class="py-3 row">
                   <div
                     class="btn-group"
                     role="group"
                     aria-label="Basic outlined example"
                   >
-                    <button type="button" class="btn btn-outline-secondary">
-                      Kioto
-                    </button>
-                    <button type="button" class="btn btn-outline-secondary">
-                      Dublin
-                    </button>
-                    <button type="button" class="btn btn-outline-secondary">
-                      Munich
-                    </button>
+                    <button type="button" class="btn">Kioto</button>
+                    <button type="button" class="btn">Dublin</button>
+                    <button type="button" class="btn">Munich</button>
                   </div>
                 </div>
               </div>

@@ -1,10 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+#miModal .modal-title, #ConfirmedReserva span, #userConfirm span:nth-child(1), .restaurant__name, header span {
+  font-family: "Chewy", serif;
+  font-weight: bold;
+  color: #ca4a3a;
+  letter-spacing: normal;
+}
+
+.btn {
+  border: none;
+  outline: 2px solid #ca4a3a;
+}
+.btn:hover {
+  background: #ca4a3a;
+  color: white;
+}
+
+header {
+  background: #ca4a3a;
+}
+header a {
+  text-decoration: none;
+}
+header span {
+  color: white;
+}
+
 .calendario > div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 .calendario > div table {
   border-collapse: collapse;
+  width: 100%;
   text-align: center;
 }
 .calendario > div th,
@@ -14,4 +43,41 @@
 }
 .calendario > div th {
   background-color: #f2f2f2;
+}
+.calendario > div td:hover {
+  background: #ca4a3a;
+  color: white;
+  cursor: pointer;
+}
+
+#userConfirm span:nth-child(1) {
+  letter-spacing: 10px;
+}
+
+.pirueta :nth-child(1) {
+  background: url("/images/reserva/pirueta.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+  animation: pirueta 2s ease-in-out infinite alternate;
+}
+@keyframes pirueta {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(10deg) translateX(30px);
+  }
+  100% {
+    transform: rotateZ(-10deg) translateX(-30px);
+  }
+}
+.pirueta :nth-child(2) {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  background: #ca4a3a;
+  width: 100%;
+  height: 20px;
 }/*# sourceMappingURL=reserva.css.map */
