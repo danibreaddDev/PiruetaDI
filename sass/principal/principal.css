@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Chewy&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+header span {
+  font-family: "Chewy", serif;
+  font-weight: bold;
+  color: #ca4a3a;
+  letter-spacing: normal;
+}
+
 @keyframes iconMove {
   0% {
     transform: rotate(0deg);
@@ -21,12 +28,6 @@ header {
   z-index: 1;
   background: white;
   width: 100%;
-}
-header span {
-  font-family: "Chewy", serif;
-  font-weight: bold;
-  color: #ca4a3a;
-  letter-spacing: normal;
 }
 @media (min-width: 576px) {
   header span {
@@ -465,7 +466,7 @@ footer .asked__questions {
   font-family: "Chewy", serif;
 }
 footer .asked__questions .accordion {
-  background: #ca4a3a !important;
+  background: #ca4a3a;
 }
 footer a {
   color: white;

@@ -26,6 +26,7 @@ let info_user = {
 
 console.log(restaurant_name);
 console.log(button_reserva);
+
 function setTableInfo() {
   const selects = document.querySelectorAll("select");
   console.log(selects);
@@ -102,15 +103,13 @@ function addEventConfirmUser() {
   });
 }
 function showInfoReserva() {
-  reserva_confirmed.innerHTML = `<div class="row row-cols-2">
+  reserva_confirmed.innerHTML = `<div class="row row-cols-1">
   <div class="col d-flex flex-column align-items-center justify-content-center">
   <h2>${info_user.day} de Febrer 2025. - <span class="fs-2 fw-bolder">${info_user.restaurant}</span></h2>
   <h5>${info_user.hour}h - <strong class="fw-bolder">${info_user.persons} persones</strong>  - ${info_user.zone}</h5>
   <p>${info_user.name} ${info_user.surnames} ${info_user.phone}</p>
   <h5 class="fw-medium">${info_user.email}</h5>
-  </div>
-  <div class="col">
-  <img src="/images/reserva/reserved.png" alt="reserved" loading="lazy" class="img-fluid">
+  <a href="reserva.html" class="btn">Salir</a>
   </div></div>`;
   reserva_confirmed.style.display = "block";
 }

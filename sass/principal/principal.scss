@@ -110,13 +110,14 @@
     $index: $index + 1;
   }
 }
+
+$main_color: #ca4a3a;
 %title {
   font-family: "Chewy", serif;
   font-weight: bold;
   color: $main_color;
   letter-spacing: normal;
 }
-$main_color: #ca4a3a;
 $munich_color: #d3c1c3ff;
 $almond: #e2d0beff;
 $kioto_color: #eee5bfff;
@@ -297,7 +298,7 @@ footer {
   .asked__questions {
     font-family: "Chewy", serif;
     .accordion {
-      background: #ca4a3a !important;
+      background: #ca4a3a ;
     }
   }
   a {

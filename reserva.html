@@ -27,7 +27,9 @@
         <div class="container-fluid">
           <div class="row">
             <div class="py-3 col-12 text-center">
-              <a href="principal.html"><span class="display-1 fs-1">Pirueta</span></a>
+              <a href="principal.html"
+                ><span class="display-1 fs-1">Pirueta</span></a
+              >
             </div>
           </div>
         </div>
@@ -225,20 +227,24 @@
         </div>
       </div>
       <!--Loading-->
-      <div class="container min-vh-100" id="loading" style="display: none;">
-        <div class="d-flex flex-column gap-3">
-          <h1 class="fw-medium">
-            Procesant la seua <strong class="fw-bold">Reserva</strong>
-          </h1>
-          <p class="fw-light text-secondary">Espere uns instants...</p>
-        </div>
+      <div class="container min-vh-100" id="loading" style="display: none">
+        <div class="row row-cols-1">
+          <div
+            class="col d-flex flex-column flex-lg-row align-items-center h-100"
+          >
+            <div class="d-flex flex-column gap-3">
+              <h1 class="fw-medium">
+                Procesant la seua <strong class="fw-bold">Reserva</strong>
+              </h1>
+              <p class="fw-light text-secondary">Espere uns instants...</p>
+            </div>
 
-        <img src="/images/reserva/loading.gif" alt="" srcset="" />
+            <img src="/images/reserva/loading.gif" alt="" srcset="" />
+          </div>
+        </div>
       </div>
       <!--Reserva confirmada-->
-      <div class="p-5 container" id="ConfirmedReserva">
-
-      </div>
+      <div class="p-5 container" id="ConfirmedReserva"></div>
       <!-- Modal -->
       <div
         class="modal fade show"
@@ -249,28 +255,66 @@
         data-bs-backdrop="static"
         data-bs-keyboard="false"
       >
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modalTitulo">Pirueta Reserva</h5>
+        <div
+          class="px-5 modal-dialog modal-dialog-centered modal-dialog-scrollable min-vw-100"
+        >
+          <div class="modal-content h-100">
+            <div class="d-flex justify-content-center">
+              <h5 class="modal-title display-1" id="modalTitulo">Pirueta Reserva</h5>
             </div>
             <div class="modal-body">
-              <div class="container">
+              <div class="container-fluid">
                 <div class="row text-center">
-                  <h2 class="fw-medium text-secondary">
-                    Elegeix El restaurant
-                  </h2>
+                  <h2 class="fw-lighter fs-2 custom">Els nostres Restaurants</h2>
                 </div>
-                <div class="py-3 row">
-                  <div
-                    class="btn-group"
-                    role="group"
-                    aria-label="Basic outlined example"
+                <div class="pt-5 d-flex flex-lg-row flex-column gap-3">
+                  <button
+                    type="button"
+                    class="position-relative overflow-hidden rounded-3"
                   >
-                    <button type="button" class="btn">Kioto</button>
-                    <button type="button" class="btn">Dublin</button>
-                    <button type="button" class="btn">Munich</button>
-                  </div>
+                    <img
+                      src="/images/kiotoinfo.webp"
+                      class="img-fluid rounded-3"
+                      alt=""
+                      srcset=""
+                    /><span
+                      class="fw-bolder position-absolute top-50 start-50 translate-middle fs-2 text-white"
+                      >KIOTO</span
+                    >
+                  </button>
+                  <button
+                    type="button"
+                    class="position-relative overflow-hidden rounded-3"
+                  >
+                    <img
+                      src="/images/dublin.jpg"
+                      class="img-fluid rounded-3"
+                      alt=""
+                      srcset=""
+                    /><span
+                      class="fw-bolder position-absolute top-50 start-50 translate-middle fs-2 text-white"
+                      >Dublin</span
+                    >
+                  </button>
+                  <button
+                    type="button"
+                    class="position-relative overflow-hidden rounded-3"
+                  >
+                    <img
+                      src="/images/munich.webp"
+                      class="img-fluid rounded-3"
+                      alt=""
+                      srcset=""
+                    /><span
+                      class="fw-bolder position-absolute top-50 start-50 translate-middle fs-2 text-white"
+                      >Munich</span
+                    >
+                  </button>
+                </div>
+                <div
+                  class="gifs d-none d-lg-flex flex-row justify-content-center"
+                >
+                  <img src="/images/reserva/gif.gif" alt="rotate" />
                 </div>
               </div>
             </div>
