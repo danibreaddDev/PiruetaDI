@@ -1,0 +1,181 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.title strong {
+  font-family: "Chewy", cursive;
+}
+
+.title, .portada h2, .font-secondary {
+  font-family: "Dancing Script", cursive;
+}
+
+.hero h6 {
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  text-decoration: line-through;
+  text-decoration-line: underline;
+  text-underline-offset: 10px;
+}
+
+.portada {
+  position: relative; /* Necesario para los elementos con posición absoluta dentro */
+  min-height: 100vh;
+  background: url("/images/dublin/portada.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+}
+.portada::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: brightness(50%);
+  z-index: 0;
+}
+
+.portada > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  header {
+    height: 20vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    height: 80vh;
+  }
+}
+.hero .grid-sections {
+  display: grid;
+  justify-items: center;
+  gap: 50px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: " images" " history" " cafes" " menu" "eventos" " . ";
+}
+@media (min-width: 768px) {
+  .hero .grid-sections {
+    grid-template-areas: " images history cafes" " menu eventos . ";
+  }
+}
+@media (min-width: 576px) {
+  .hero .grid-sections {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: " images history" " cafes  menu" " eventos . ";
+  }
+}
+.hero .grid-sections :nth-child(1) {
+  grid-area: images;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 20px;
+}
+.hero .grid-sections :nth-child(1) a {
+  transition: scale 200ms ease-in-out;
+}
+.hero .grid-sections :nth-child(1) a:hover {
+  scale: 125%;
+}
+.hero .grid-sections :nth-child(2) {
+  grid-area: history;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 20px;
+}
+.hero .grid-sections :nth-child(2) a {
+  transition: scale 200ms ease-in-out;
+}
+.hero .grid-sections :nth-child(2) a:hover {
+  scale: 125%;
+}
+.hero .grid-sections :nth-child(3) {
+  grid-area: cafes;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 20px;
+}
+.hero .grid-sections :nth-child(3) a {
+  transition: scale 200ms ease-in-out;
+}
+.hero .grid-sections :nth-child(3) a:hover {
+  scale: 125%;
+}
+.hero .grid-sections :nth-child(4) {
+  grid-area: menu;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 20px;
+}
+.hero .grid-sections :nth-child(4) a {
+  transition: scale 200ms ease-in-out;
+}
+.hero .grid-sections :nth-child(4) a:hover {
+  scale: 125%;
+}
+.hero .grid-sections :nth-child(5) {
+  grid-area: eventos;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 20px;
+}
+.hero .grid-sections :nth-child(5) a {
+  transition: scale 200ms ease-in-out;
+}
+.hero .grid-sections :nth-child(5) a:hover {
+  scale: 125%;
+}
+
+.title {
+  font-size: clamp(10px, 10vw, 96px);
+}
+main #images .gallery .imgs img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: width 1s ease-in-out;
+}
+main #images .gallery .imgs img:hover {
+  width: 100%;
+}
+main #images .gallery .imgs img:not(:hover) {
+  width: 15%;
+}
+main #images .gallery .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  z-index: -1;
+}
+main #history .history {
+  font-size: clamp(16px, 2vw, 30px);
+}/*# sourceMappingURL=dublin.css.map */
