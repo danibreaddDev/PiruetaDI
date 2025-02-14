@@ -4,7 +4,7 @@
   font-family: "Chewy", cursive;
 }
 
-.title, .portada h2, .font-secondary {
+main #cafes .cafe-mongo:hover p, main #cafes .cafe-matte:hover p, main #cafes .cafe-casa:hover p, .title, .portada h2, .font-secondary {
   font-family: "Dancing Script", cursive;
 }
 
@@ -180,97 +180,182 @@ main #images .gallery .info {
   width: 50%;
   z-index: -1;
 }
+main #history {
+  background: #d3c1c3;
+}
 main #history .history {
   font-size: clamp(16px, 2vw, 30px);
 }
+main #cafes .cafe-casa {
+  overflow: hidden;
+  padding: 10px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main #cafes .cafe-casa img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 200px;
+  transition: scale 1s ease-in-out;
+}
+main #cafes .cafe-casa p {
+  display: none;
+}
+main #cafes .cafe-casa:hover {
+  background: transparent;
+}
+main #cafes .cafe-casa:hover p {
+  color: #d3c1c3;
+  display: flex;
+}
+main #cafes .cafe-casa:hover img {
+  scale: 120%;
+  filter: brightness(50%);
+}
+main #cafes .cafe-matte {
+  overflow: hidden;
+  padding: 10px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main #cafes .cafe-matte img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 200px;
+  transition: scale 1s ease-in-out;
+}
+main #cafes .cafe-matte p {
+  display: none;
+}
+main #cafes .cafe-matte:hover {
+  background: transparent;
+}
+main #cafes .cafe-matte:hover p {
+  color: #d3c1c3;
+  display: flex;
+}
+main #cafes .cafe-matte:hover img {
+  scale: 120%;
+  filter: brightness(50%);
+}
+main #cafes .cafe-mongo {
+  overflow: hidden;
+  padding: 10px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main #cafes .cafe-mongo img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 200px;
+  transition: scale 1s ease-in-out;
+}
+main #cafes .cafe-mongo p {
+  display: none;
+}
+main #cafes .cafe-mongo:hover {
+  background: transparent;
+}
+main #cafes .cafe-mongo:hover p {
+  color: #d3c1c3;
+  display: flex;
+}
+main #cafes .cafe-mongo:hover img {
+  scale: 120%;
+  filter: brightness(50%);
+}
+main #cafes .menu a {
+  width: 100%;
+  height: 100%;
+}
+main #cafes .menu img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 400px;
+  transition: filter 200ms ease-in-out;
+}
+main #cafes .menu span {
+  display: none;
+}
+main #cafes .menu:hover img {
+  filter: blur(2px);
+}
+main #cafes .menu:hover span {
+  text-shadow: 1px 1px 1px black;
+  display: flex;
+}
+main #eventos .event {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+main #eventos .event img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 992px) and (max-width: 1400px) {
+  main #eventos .event {
+    width: 100%;
+    flex-direction: column;
+  }
+  main #eventos .event img {
+    width: 100%;
+    height: 300px;
+  }
+}
+@media (min-width: 1401px) {
+  main #eventos .event {
+    width: 50%;
+    flex-direction: row;
+  }
+  main #eventos .event img {
+    width: 40%;
+    height: 300px;
+  }
+}
 
-#cafes {
+footer {
+  width: 100%;
   background: #d3c1c3;
 }
-#cafes .cafe-casa {
-  overflow: hidden;
-  padding: 10px;
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+footer .asked__questions {
+  font-family: "Chewy", serif;
 }
-#cafes .cafe-casa img {
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: 100%;
-  height: 200px;
-  transition: scale 1s ease-in-out;
+footer .asked__questions .accordion {
+  background: #ca4a3a;
 }
-#cafes .cafe-casa p {
-  display: none;
+footer a {
+  color: white;
+  text-decoration: none;
+  font-family: "Chewy", serif;
 }
-#cafes .cafe-casa:hover {
-  background: transparent;
+footer a:hover {
+  -webkit-text-decoration: dashed;
+          text-decoration: dashed;
+  text-decoration-line: underline;
+  text-underline-offset: 10px;
 }
-#cafes .cafe-casa:hover p {
-  display: flex;
+footer .footer__title h1 {
+  font-family: "Chewy", serif;
+  font-size: 10vw;
+  letter-spacing: 10px;
 }
-#cafes .cafe-casa:hover img {
-  scale: 120%;
-  filter: brightness(50%);
-}
-#cafes .cafe-matte {
-  overflow: hidden;
-  padding: 10px;
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#cafes .cafe-matte img {
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: 100%;
-  height: 200px;
-  transition: scale 1s ease-in-out;
-}
-#cafes .cafe-matte p {
-  display: none;
-}
-#cafes .cafe-matte:hover {
-  background: transparent;
-}
-#cafes .cafe-matte:hover p {
-  display: flex;
-}
-#cafes .cafe-matte:hover img {
-  scale: 120%;
-  filter: brightness(50%);
-}
-#cafes .cafe-mongo {
-  overflow: hidden;
-  padding: 10px;
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#cafes .cafe-mongo img {
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: 100%;
-  height: 200px;
-  transition: scale 1s ease-in-out;
-}
-#cafes .cafe-mongo p {
-  display: none;
-}
-#cafes .cafe-mongo:hover {
-  background: transparent;
-}
-#cafes .cafe-mongo:hover p {
-  display: flex;
-}
-#cafes .cafe-mongo:hover img {
-  scale: 120%;
-  filter: brightness(50%);
+@media (min-width: 576px) {
+  footer .footer__title h1 {
+    letter-spacing: 40px;
+  }
 }/*# sourceMappingURL=dublin.css.map */
