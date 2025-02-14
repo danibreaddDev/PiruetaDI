@@ -146,7 +146,7 @@ main {
       @extend %mark;
       background: $main_color;
     }
-    
+
     .menu__container {
       .col {
         margin: 0;
@@ -192,9 +192,17 @@ main {
 }
 footer {
   .asked__questions {
-    font-family: "Chewy", serif;
-    .accordion {
-      background: #ca4a3a !important;
+    width: 100%;
+    h2 {
+      font-family: "Chewy", serif;
+    }
+
+    button {
+      font-weight: bold;
+      color: white;
+      width: 100%;
+      border: none;
+      background: transparent;
     }
   }
   a {

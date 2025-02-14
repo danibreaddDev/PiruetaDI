@@ -182,10 +182,17 @@ footer {
   background: #ca4a3a;
 }
 footer .asked__questions {
+  width: 100%;
+}
+footer .asked__questions h2 {
   font-family: "Chewy", serif;
 }
-footer .asked__questions .accordion {
-  background: #ca4a3a !important;
+footer .asked__questions button {
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  border: none;
+  background: transparent;
 }
 footer a {
   color: white;
