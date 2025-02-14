@@ -34,6 +34,7 @@
 @mixin cafes($cafes) {
   @each $cafe in $cafes {
     .cafe-#{$cafe} {
+      overflow: hidden;
       padding: 10px;
       background: white;
       display: flex;
@@ -41,9 +42,23 @@
       justify-content: center;
       align-items: center;
       img {
-       
-        width: fit-content;
+       object-fit: contain;
+        width: 100%;
         height: 200px;
+        transition: scale 1s ease-in-out;
+      }
+      p{
+        display: none;
+      }
+      &:hover{
+        background: transparent;
+        p{
+          display: flex;
+        }
+        img{
+          scale : 120%;
+          filter : brightness(50%);
+        }
       }
     }
   }
