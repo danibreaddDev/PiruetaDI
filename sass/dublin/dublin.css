@@ -12,6 +12,10 @@
   font-family: "Inter", sans-serif;
 }
 
+.font-secondary {
+  text-shadow: 1px 1px 1px black;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -38,7 +42,7 @@ a:hover {
   width: 100%;
   height: 100%;
   background: inherit;
-  filter: brightness(50%);
+  filter: brightness(40%);
   z-index: 0;
 }
 
@@ -178,4 +182,47 @@ main #images .gallery .info {
 }
 main #history .history {
   font-size: clamp(16px, 2vw, 30px);
+}
+
+#cafes {
+  background: #d3c1c3;
+}
+#cafes .cafe-casa {
+  padding: 10px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#cafes .cafe-casa img {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 200px;
+}
+#cafes .cafe-matte {
+  padding: 10px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#cafes .cafe-matte img {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 200px;
+}
+#cafes .cafe-mongo {
+  padding: 10px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#cafes .cafe-mongo img {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 200px;
 }/*# sourceMappingURL=dublin.css.map */

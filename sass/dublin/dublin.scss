@@ -31,6 +31,24 @@
     }
   }
 }
+@mixin cafes($cafes) {
+  @each $cafe in $cafes {
+    .cafe-#{$cafe} {
+      padding: 10px;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+       
+        width: fit-content;
+        height: 200px;
+      }
+    }
+  }
+}
+$main_color: #d3c1c3ff;
 %font-main {
   font-family: "Chewy", cursive;
 }
@@ -42,9 +60,9 @@
 }
 .font-secondary {
   @extend %font-secondary;
+  text-shadow: 1px 1px 1px black;
 }
 
-$main_color: #d3c1c3ff;
 a {
   text-decoration: none;
   color: white;
@@ -74,7 +92,7 @@ a {
   width: 100%;
   height: 100%;
   background: inherit;
-  filter: brightness(50%);
+  filter: brightness(40%);
   z-index: 0;
 }
 
@@ -138,9 +156,14 @@ main {
       }
     }
   }
-  #history{
+  #history {
     .history {
-       font-size: clamp(16px,2vw,30px);
+      font-size: clamp(16px, 2vw, 30px);
     }
   }
+}
+#cafes {
+  background: $main_color;
+  $cafes: casa, matte, mongo;
+  @include cafes($cafes);
 }
