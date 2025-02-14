@@ -20,7 +20,7 @@
   height: 25px;
 }
 
-footer .footer__title h1, footer .asked__questions, main .menu__section .menu__container .slogan, main .title__section, main .about__section .feature, .carta, main .menu__section .menu__container .menu__info, main .hero__section .title, header span {
+main .menu__section .menu__container .slogan, main .title__section, main .about__section .feature, .carta, main .menu__section .menu__container .menu__info, main .hero__section .title, header span {
   font-family: fontJapan;
 }
 
@@ -181,6 +181,9 @@ footer {
   width: 100%;
   background: #ca4a3a;
 }
+footer .asked__questions {
+  font-family: "Chewy", serif;
+}
 footer .asked__questions .accordion {
   background: #ca4a3a !important;
 }
@@ -196,6 +199,7 @@ footer a:hover {
   text-underline-offset: 10px;
 }
 footer .footer__title h1 {
+  font-family: "Chewy", serif;
   font-size: 10vw;
   letter-spacing: 10px;
 }

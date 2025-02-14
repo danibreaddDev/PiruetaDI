@@ -192,7 +192,7 @@ main {
 }
 footer {
   .asked__questions {
-    @extend %font;
+    font-family: "Chewy", serif;
     .accordion {
       background: #ca4a3a !important;
     }
@@ -212,7 +212,7 @@ footer {
 
   .footer__title {
     h1 {
-      @extend %font;
+      font-family: "Chewy", serif;
       font-size: 10vw;
       letter-spacing: 10px;
     }
