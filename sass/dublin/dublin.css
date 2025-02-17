@@ -186,6 +186,10 @@ main #history {
 main #history .history {
   font-size: clamp(16px, 2vw, 30px);
 }
+main #history img {
+  -webkit-mask-image: linear-gradient(black, transparent);
+  mask-image: linear-gradient(#d3c1c3, transparent);
+}
 main #cafes .cafe-casa {
   overflow: hidden;
   padding: 10px;

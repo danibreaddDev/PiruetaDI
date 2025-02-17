@@ -93,6 +93,7 @@ a {
   position: relative; /* Necesario para los elementos con posición absoluta dentro */
   min-height: 100vh;
   background: url("/images/dublin/portada.jpg");
+
   background-size: cover;
   background-repeat: repeat;
   background-position: center;
@@ -177,6 +178,10 @@ main {
     background: $main_color;
     .history {
       font-size: clamp(16px, 2vw, 30px);
+    }
+    img{
+      -webkit-mask-image: linear-gradient(black, transparent);
+      mask-image: linear-gradient($main_color, transparent);
     }
   }
   #cafes {

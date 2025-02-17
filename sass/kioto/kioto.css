@@ -176,6 +176,9 @@ main .menu__section .menu__container a:hover img {
 .specialday__section .mark__section {
   background: #ca4a3a;
 }
+.specialday__section img {
+  mix-blend-mode: hard-light;
+}
 
 footer {
   width: 100%;

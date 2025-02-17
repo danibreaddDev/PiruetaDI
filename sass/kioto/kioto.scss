@@ -189,6 +189,9 @@ main {
     @extend %mark;
     background: $main_color;
   }
+  img{
+    mix-blend-mode: hard-light;
+  }
 }
 footer {
   .asked__questions {
